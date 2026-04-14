@@ -38,19 +38,22 @@
     <p>
         <input type="number" name="tn1" id="tn1">
         <input type="number" name="tn2" id="tn2">
-        <input type="button" value="SOMAR" onclick="Somar()">
-        <div id="res">Resultado</div>
+        <input type="button" value="SOMAR" onclick="somar()">
     </p>
+    <div id="res">
+        RESULTADO
+    </div>
+
     <script>
-      function Somar() {
-        var tn1 = window.document.getElementById('tn1')
-        var tn2 = window.document.getElementById('tn2')
+
+        function somar() {
+        var tn1 = document.querySelector('input#tn1')
+        var tn2 = document.querySelector('input#tn2')
         var n1 = Number(tn1.value)
         var n2 = Number(tn2.value)
-        var s = n1 + n2
-        res.innerText = `O resultado de ${n1} + ${n2} é igual a ${s}`
-      }
-    </script>
-        
+        var soma = n1 + n2
+        res.innerText = `A soma dos valores ${n1} + ${n2} é igual a ${soma}`
+        }
+    </script>  
 </body>
 </html>
