@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+    <style>
+        p {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+           
+        }
+
+        input {
+            width: 300px;
+            height: 100px;
+            font: bolder 5em arial;
+            padding: 5px;
+            
+        }
+
+        input[type=button] {
+            background-color: rgb(64, 64, 64);
+            color: white;
+            font: bolder 2em arial;
+            cursor: pointer;
+        }
+
+        div#res {
+            text-align: center;
+            margin-top: 50px;
+            font: bolder 3em arial;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <input type="number" name="tn1" id="tn1">
+        <input type="number" name="tn2" id="tn2">
+        <input type="button" value="SOMAR" onclick="Somar()">
+        <div id="res">Resultado</div>
+    </p>
+    <script>
+      function Somar() {
+        var tn1 = window.document.getElementById('tn1')
+        var tn2 = window.document.getElementById('tn2')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerText = `O resultado de ${n1} + ${n2} é igual a ${s}`
+      }
+    </script>
+        
+</body>
+</html>
