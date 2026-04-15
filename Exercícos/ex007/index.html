@@ -8,9 +8,38 @@
        body {
         font: normal 2em system-ui
        }
+
+       input {
+        font-size: 1.4em;
+       }
     </style>
 </head>
 <body>
-    
+    <h1>Qual é o seu país de origem?</h1>
+    <input placeholder="Digite aqui" autocomplete="off" type="text" name="ntx" id="ntx">
+    <input type="button" value="Confirmar" id="bot" onclick="botao()">
+    <div id="res"></div>
+    <script>
+       
+        
+
+        function botao() {
+            var ntx = document.getElementById('ntx')
+            var nome = String(ntx.value)
+            var res = document.getElementById('res')
+            var bot = document.getElementById('bot')
+
+            if (nome == 'Brasil') {
+                res.innerHTML = `O seu país é ${nome}, então você é brasileiro!`
+            } else {
+                res.innerHTML = `O seu país é ${nome}, então você é estrangeiro! `
+            }
+
+            
+            
+        }
+
+        
+    </script>
 </body>
 </html>
