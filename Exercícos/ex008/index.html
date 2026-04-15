@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+       body {
+        font: normal 2em system-ui
+       }
+
+       input {
+        font-size: 1.4em;
+        padding: 10px;
+        width: 280px;
+       }
+    </style>
+</head>
+<body>
+    <h1>DETRAN</h1>
+    <h2>Consulte a sua velocidade aqui</h2>
+    <input type="number" name="n1" id="n1" >
+    <input type="button" value="VERIFICAR" onclick="botao()"> 
+    <div id="res"><h2></h2></div>
+
+    <script>
+        function botao() {
+        var n1 = document.querySelector('input#n1')
+        var vel = Number(n1.value)
+        var res = document.querySelector('div#res')
+        if (vel > 60) {
+        res.innerHTML = `Você ultrapassou o limite de velocidade, foram cerca de ${vel}km/h. Siga abaixo para mais orientações.`
+        } else {
+            res.innerHTML = `Nada encontrado.`
+        }
+        }
+    </script>
+
+    
+</body>
+</html>
