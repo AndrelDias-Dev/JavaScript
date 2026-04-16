@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+       body {
+        font: normal 2em system-ui
+       }
+
+       input {
+        font-size: 1.4em;
+        padding: 10px;
+        width: 280px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Que horas são? </h1>
+    <input type="number" name="n1" id="n1">
+    <input type="button" value="ENVIAR" onclick="enviar()">
+    <div id="res"><h2></h2></div>
+
+    <script>
+        
+        
+        function enviar() {
+        var n1 = document.querySelector('input#n1')
+        var hora = Number(n1.value)
+        var res = document.querySelector('div#res')
+
+        if (hora < 11) {
+            res.innerHTML = `Agora são ${hora} horas, Bom dia!`
+        } else if (hora <= 17) {
+            res.innerHTML = `Agora são ${hora} horas, Boa tarde!`
+        } else {
+            res.innerHTML = `Agora são ${hora} horas, Boa Noite!`
+        } 
+        }
+        
+    </script>
+    
+</body>
+</html>
