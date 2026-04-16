@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+       body {
+        font: normal 1.8em system-ui
+       }
+
+       input {
+        font-size: 1.3em;
+        padding: 10px;
+       }
+
+       input[type=number] {
+        width: 440px;
+       }
+
+       input[type=button] {
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+        transition: 0.2s;
+        cursor: pointer;
+       }
+
+       input[type=button]:hover {
+        background-color: white;
+        color: black;
+       }
+    </style>
+</head>
+<body>
+    <h1>Confira sua idade para votar logo abaixo</h1>
+    <input placeholder="Digite sua idade aqui" type="number" name="n1" id="n1">
+    <input type="button" value="VERIFICAR" onclick="botao()">
+    <div id="res"></div>
+
+    <script>
+        function botao() {
+            var n1 = document.querySelector('input#n1')
+            var idade = Number(n1.value)
+            var res = document.querySelector('div#res')
+
+            if (idade < 15) {
+                res.innerHTML = `Você tem ${idade} anos! Você ainda não tem direito ao voto!`
+            } else if (idade <= 16 || idade <=17 ) {
+                res.innerHTML = `Você tem ${idade} anos! Você tem o direito do voto opcional!`
+            } else if (idade <= 18 || idade <= 70) {
+                res.innerHTML = `Você tem ${idade} anos! O seu voto é obrigatório procure uma urna no colégio mais próximo!`
+            } else {
+                res.innerHTML = `Você tem ${idade} anos! Você é idoso(a) tem direito ao voto opcional!`
+            }
+        }
+    </script>
+
+</body>
+</html>
