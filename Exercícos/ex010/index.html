@@ -33,28 +33,27 @@
     </style>
 </head>
 <body>
-    <h1>Confira sua idade para votar logo abaixo</h1>
-    <input placeholder="Digite sua idade aqui" type="number" name="n1" id="n1">
-    <input type="button" value="VERIFICAR" onclick="botao()">
+    <h1>Confira abaixo se você pode votar esse ano</h1>
+    <input placeholder="Digite sua idade" type="number" name="n1" id="n1">
+    <input type="button" value="VERICAR" onclick="botao()">
     <div id="res"></div>
 
     <script>
         function botao() {
-            var n1 = document.querySelector('input#n1')
-            var idade = Number(n1.value)
-            var res = document.querySelector('div#res')
+        var n1 = document.querySelector('input#n1')
+        var idade = Number(n1.value)
+        var res = document.querySelector('div#res')
 
-            if (idade < 15) {
-                res.innerHTML = `Você tem ${idade} anos! Você ainda não tem direito ao voto!`
-            } else if (idade <= 16 || idade <=17 ) {
-                res.innerHTML = `Você tem ${idade} anos! Você tem o direito do voto opcional!`
-            } else if (idade <= 18 || idade <= 70) {
-                res.innerHTML = `Você tem ${idade} anos! O seu voto é obrigatório procure uma urna no colégio mais próximo!`
-            } else {
-                res.innerHTML = `Você tem ${idade} anos! Você é idoso(a) tem direito ao voto opcional!`
-            }
+        if (idade <= 15){
+            res.innerHTML = `Você tem ${idade} anos. Você ainda não tem idade para votar.`
+        } else if (idade <= 17 || idade > 70) {
+            res.innerHTML = `Você tem ${idade} anos. Você tem o direito ao voto opcional`
+        } else if (idade < 70) {
+            res.innerHTML = `Você tem ${idade} anos. Você como cidadão tem obrigação de votar`
         }
+        } 
     </script>
+    
 
 </body>
 </html>
