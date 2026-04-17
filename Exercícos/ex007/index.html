@@ -6,40 +6,43 @@
     <title>Document</title>
     <style>
        body {
-        font: normal 2em system-ui
+        font: normal 2em system-ui;
+        text-align: center;
        }
 
        input {
         font-size: 1.4em;
+        width: 400px;
+       }
+
+       p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
        }
     </style>
 </head>
 <body>
     <h1>Qual é o seu país de origem?</h1>
-    <input placeholder="Digite aqui" autocomplete="off" type="text" name="ntx" id="ntx">
-    <input type="button" value="Confirmar" id="bot" onclick="botao()">
+    <p>
+        <input placeholder="Digite seu páis aqui" type="text" name="ntx" id="ntx">
+        <input type="button" value="Enviar" onclick="enviar()">
+    </p>
     <div id="res"></div>
+
     <script>
-       
-        
+        function enviar() {
+            var ntx = document.querySelector('input#ntx')
+            var pais = (ntx.value)
+            var res = document.querySelector('div#res')
 
-        function botao() {
-            var ntx = document.getElementById('ntx')
-            var nome = String(ntx.value)
-            var res = document.getElementById('res')
-            var bot = document.getElementById('bot')
-
-            if (nome == 'Brasil') {
-                res.innerHTML = `O seu país é ${nome}, então você é brasileiro!`
+            if (pais == 'Brasil') {
+                res.innerHTML = `Você é do ${pais}! Então você é brasileiro!`
             } else {
-                res.innerHTML = `O seu país é ${nome}, então você é estrangeiro! `
+                res.innerHTML = `Você é do ${pais}! Então você é estrangeiro`
             }
-
-            
-            
         }
-
-        
     </script>
 </body>
 </html>

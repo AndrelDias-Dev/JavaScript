@@ -35,25 +35,23 @@
     </style>
 </head>
 <body>
+    <h1>Faça seu cálculo abaixo:</h1>
     <p>
-        <input type="number" name="tn1" id="tn1">
-        <input type="number" name="tn2" id="tn2">
+        <input type="number" name="n1" id="n1">
+        <input type="number" name="n2" id="n2">
         <input type="button" value="SOMAR" onclick="somar()">
     </p>
-    <div id="res">
-        RESULTADO
-    </div>
+
+    <div id="res">Resultado...</div>
 
     <script>
-
         function somar() {
-        var tn1 = document.querySelector('input#tn1')
-        var tn2 = document.querySelector('input#tn2')
-        var n1 = Number(tn1.value)
-        var n2 = Number(tn2.value)
-        var soma = n1 + n2
-        res.innerText = `A soma dos valores ${n1} + ${n2} é igual a ${soma}`
+            var n1 = document.getElementById('n1')
+            var n2 = document.getElementById('n2')
+            var res = document.querySelector('div#res')
+            res.innerHTML = Number(n1.value) + Number(n2.value)
+            
         }
-    </script>  
+    </script>
 </body>
 </html>
