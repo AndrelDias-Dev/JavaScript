@@ -17,28 +17,28 @@
     </style>
 </head>
 <body>
-    <h1>Que horas são? </h1>
+    <h1>Quero horas são agora?</h1>
     <input type="number" name="n1" id="n1">
-    <input type="button" value="ENVIAR" onclick="enviar()">
-    <div id="res"><h2></h2></div>
-
+    <input type="button" value="ENVIAR" onclick="botao()">
+    <div id="res"></div>
     <script>
-        
-        
-        function enviar() {
-        var n1 = document.querySelector('input#n1')
-        var hora = Number(n1.value)
-        var res = document.querySelector('div#res')
 
-        if (hora < 11) {
-            res.innerHTML = `Agora são ${hora} horas, Bom dia!`
-        } else if (hora <= 17) {
-            res.innerHTML = `Agora são ${hora} horas, Boa tarde!`
-        } else {
-            res.innerHTML = `Agora são ${hora} horas, Boa Noite!`
-        } 
+        function botao() {
+            var n1 = document.querySelector('input#n1')
+            var res = document.querySelector('div#res')
+            var hora = (n1.value)
+
+            if (hora <= 11) {
+                res.innerHTML = `Agora são ${hora} horas. Bom dia!`
+            } else if (hora < 18) {
+                res.innerHTML = `Agora são ${hora} horas. Boa Tarde!`
+            } else {
+                res.innerHTML = `Agora são ${hora} horas. Boa noite!`
+            }
         }
         
+        
+   
     </script>
     
 </body>

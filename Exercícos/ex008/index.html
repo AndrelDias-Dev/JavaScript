@@ -17,22 +17,24 @@
     </style>
 </head>
 <body>
-    <h1>DETRAN</h1>
-    <h2>Consulte a sua velocidade aqui</h2>
-    <input placeholder="Digite o número" type="number" name="n1" id="n1" >
-    <input type="button" value="VERIFICAR" onclick="botao()"> 
-    <div id="res"><h2></h2></div>
-
+    <h1>Detran</h1>
+    <p>Confira a velocidade do veículo</p>
+    <p>
+        <input type="number" name="n1" id="n1">
+        <input type="button" value="VERIFICAR" onclick="verificar()">
+    </p>
+    <div id="res"></div>
     <script>
-        function botao() {
-        var n1 = document.querySelector('input#n1')
-        var vel = Number(n1.value)
-        var res = document.querySelector('div#res')
-        if (vel > 60) {
-        res.innerHTML = `Você ultrapassou o limite de velocidade, foram cerca de ${vel}km/h. Siga abaixo para mais orientações.`
-        } else {
-            res.innerHTML = `Nada encontrado.`
-        }
+        function verificar() {
+            var n1 = document.querySelector('input#n1')
+            var res = document.querySelector('div#res')
+            var vel = (n1.value)
+
+            if (vel < 60) {
+                res.innerHTML = `Nada encontrado.`
+            } else {
+                res.innerHTML = `Você acabou de ser multado por excesso de velocidade. Foram cerca de ${vel}km/h.`
+            }
         }
     </script>
 
