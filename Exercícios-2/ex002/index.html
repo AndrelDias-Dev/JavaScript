@@ -6,17 +6,28 @@
     <link rel="stylesheet" href="estilos/style.css">
     <title>Document</title>
 </head>
-<body onload="carregar()">
+<body>
     <header>
         <h1>Titulo</h1>
     </header>
     <section>
-        <div id="msg">
-            Testando...
+        <div>
+            <p> Ano de Nascimento:
+               <input type="number" name="ntx" id="ntx" width="10px">
+            </p>
+            <p> Sexo:
+                <label for="tm">Masculino</label>
+                <input type="radio" name="tsex" id="tm">
+                <label for="tf">Feminino</label>
+                <input type="radio" name="tsex" id="tf">
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div id="img">
-            <img id="imagem" src="imagens/manha.png" alt="">
+        <div id="res">
         </div>
+        
     </section>
     <footer>
         <p>CursoemVideo</p>

@@ -2,6 +2,7 @@
 
 body {
     font: normal 2em arial;
+    background-color: black;
     
 }
 
@@ -17,8 +18,31 @@ section {
     width: 80vw;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.456);
-    text-align: center;
 }
+
+img {
+    display: block;
+    margin: auto;
+}
+
+input#ntx {
+   width: 50px;
+   position: relative;
+   top: -4px;
+   height: 20px;
+
+}
+
+input[type=radio] {
+  transform: scale(1.5);
+  position: relative;
+  top: -3px;
+}
+
+input[type=button] {
+    font-size: 1.3em;
+}
+
 
 footer {
     text-align: center;
