@@ -2,8 +2,8 @@ function verificar() {
     var a = 1
     
     do {
-        document.write('Olá pessoal! ')
+        document.write('Andrel ')
         a++
-    } while (a <= 10)
+    } while (a <= 100)
    
 }
