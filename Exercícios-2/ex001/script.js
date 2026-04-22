@@ -6,6 +6,7 @@ function carregar() {
 
     if (hora >= 5 && hora < 12) {
         msg.innerHTML = `São ${hora} horas agora, Bom dia!`
+    
     } else if (hora < 18) {
        msg.innerHTML = `São ${hora} horas agora, Boa tarde!`
        img.src = 'imagens/tarde.png'
