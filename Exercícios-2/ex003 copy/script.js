@@ -1,6 +1,6 @@
 function gerar() {
     var num = document.getElementById('num')
-    var tab = document.getElementById('seletab')
+    var tab = document.getElementById('tab')
 
     if (num.value.length == 0) {
         window.alert('erro')
