@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
-    <title>Document</title>
+    <title>Contador</title>
 </head>
 <body>
     <section>
+        <h1 style="text-align: center;">Contador</h1>
         <div>
-            <label for="ini">Inicio:</label>
-            <input type="number" name="inicio" id="ini">            
+            <p>
+                Início: <input type="number" name="inicio" id="ini">
+            </p>
+            <p>
+                Fim: <input type="number" name="final" id="fim">
+            </p>
+            <p>
+                Passo: <input type="number" name="passo" id="pas">
+            </p>
         </div>
-        <div>
-            <label for="fim">Final:</label>
-            <input type="number" name="final" id="fim">
-        </div>
-        <div>
-            <label for="pas">Passo:</label>
-            <input type="number" name="passo" id="pas">
-        </div>
-        <br>
         <div>
             <input type="button" value="Gerar" onclick="gerar()">
         </div>
