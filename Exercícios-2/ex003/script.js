@@ -7,13 +7,14 @@ function gerar() {
     if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
         window.alert('ERRO')
     } else {
-        var i = Number(ini.value)
-        var f = Number(fim.value)
-        var p = Number(pas.value)
-        res.innerHTML = ''
+        i = Number(ini.value)
+        f = Number(fim.value) 
+        p = Number(pas.value)
 
+        res.innerHTML = ''
+        
         if (i < f) {
-            for  (var c = i; c <= f; c += p) {
+            for (var c = i; c <= f; c += p) {
             res.innerHTML += ` ${c} `
         }
         } else {
@@ -22,5 +23,6 @@ function gerar() {
             }
         }
         
-}
+
+    }
 }
