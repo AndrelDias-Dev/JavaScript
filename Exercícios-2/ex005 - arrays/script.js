@@ -1,20 +1,16 @@
-
-
 function gerar() {
     var res = document.getElementById('res')
-    let roupa = ['Casaco ', 'Tenis ', 'Calça ', 'Camiseta ', 'Boné ', 'Óculos ']
+    let filme = ['Maze Runner, ', 'Os Vingadores, ', 'Resident Evil, ', 'O Cara de Barro, ', 'Uma noite no Museu. ']
 
-    for(let pos=0; pos < roupa.length; pos++) {
-        res.innerHTML += `O valor ${pos} tem valores ${roupa[pos]}`
-    }
+    res.innerHTML = ''
 
-    // PADRÃO E SIMPLIFICADA
-
- /*   for (let pos in roupa) {
-        res.innerHTML += `O valor ${pos} tem valores ${roupa[pos]}`
+  /*  for (let pos = 0; pos < filme.length; pos++) {
+        res.innerHTML += `${filme[pos]}`
     } */
 
-    
-    
+   for (let pos in filme) {
+        res.innerHTML += ` ${filme[pos]} `
+    }  
 
+    
 }
