@@ -1,17 +1,29 @@
-function gerar() {
-    var res = document.getElementById('res')
+let res = document.getElementById('res')
+let compras = ['arroz', 'feijão', 'macarrão', 'bife', 'alface']
+let monstrando = false
 
-    let filme = ['Maze Runner, ', 'Os Vingadores, ', 'Resident Evil, ', 'O Cara de Barro, ', 'Uma noite no Museu. ']
+compras.push('farinha', 'ovo', 'empanado')
+compras.sort()
 
+const lista = () => {
+    res.innerHTML = `${compras.join(', ')}`
+
+}
+
+const limpar = () => {
     res.innerHTML = ''
+}
 
-    
-  
 
-    
-    for (let pos in filme) {
-        res.innerHTML += `${filme[pos]}`
+document.getElementById('btn').addEventListener('click', () => {
+
+    if (monstrando === false) {
+        lista()
+        monstrando = true
+    } else {
+        limpar()
+        monstrando = false
     }
 
-    
-}
+})
+
