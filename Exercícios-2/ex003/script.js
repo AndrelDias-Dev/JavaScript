@@ -1,28 +1,32 @@
-function gerar() {
-    var ini = document.getElementById('ini')
-    var fim = document.getElementById('fim')
-    var pas = document.getElementById('pas')
-    var res = document.getElementById('res')
+const btn = document.querySelector('#btn')
+const res = document.querySelector('#res')
+
+btn.addEventListener('click', () => {
+    const ini = document.getElementById('ini')
+    const fim = document.getElementById('fim')
+    const pas = document.getElementById('pas')
+
+    const i = Number(ini.value)
+    const f = Number(fim.value)
+    const p = Number(pas.value)
 
     if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
-        window.alert('ERRO')
+        window.alert('ERROR')
     } else {
-        i = Number(ini.value)
-        f = Number(fim.value) 
-        p = Number(pas.value)
-
         res.innerHTML = ''
-        
+
         if (i < f) {
-            for (var c = i; c <= f; c += p) {
-            res.innerHTML += ` ${c} `
+            for (let c = i; c < f; c += p) {
+            res.innerHTML += ` ${c} 👉`
         }
         } else {
-            for (var c = i; c >= f; c -= p) {
-                res.innerHTML += ` ${c} `
+            for (let c = i; c > f; c -= p) {
+                res.innerHTML += ` ${c} 👉`
             }
         }
-        
+
+        res.innerHTML += ` 🏳️ `
 
     }
-}
+})
+
