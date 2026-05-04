@@ -18,8 +18,11 @@ section {
     width: 80vw;
     margin: auto;
     border: 3px dashed rgb(255, 254, 254);
-    
 
+}
+
+select#flist {
+    width: 300px;
 }
 
 img {
