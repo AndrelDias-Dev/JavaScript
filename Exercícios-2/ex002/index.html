@@ -11,21 +11,23 @@
         <h1>Verificando Idade</h1>
     </header>
     <section>
-        <form action="" id="form">
+        <div>
             <p>
-                <label for="ano">Ano de Nascimento:</label>
-                <input type="number" name="tano" id="ano">
+                <label for="num">Ano de Nascimento</label>
+                <input type="number" name="number" id="num">
             </p>
             <p>
-                <label for="sexo">Masculino</label>
+                <label for="mas">Masculino</label>
                 <input type="radio" name="sex" id="mas" checked>
-                <label for="sexo">Feminino</label>
+                <label for="fem">Feminino</label>
                 <input type="radio" name="sex" id="fem">
             </p>
             <p>
-                 <input type="button" value="Enviar" onclick="verificar()">
+                <button id="btn">
+                    Verificar
+                </button>
             </p>
-        </form>    
+        </div> 
         <div id="res">
         </div>
     </section>

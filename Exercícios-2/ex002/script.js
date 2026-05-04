@@ -1,19 +1,32 @@
-function verificar() {
-    var res = document.getElementById('res')
-    var fano = document.getElementById('ano')
-    var ano = new Date().getFullYear()
+let ano = document.getElementById('num')
+let fsex = document.getElementsByName('sex')
+let anoAtual = new Date().getFullYear()
+let btn = document.getElementById('btn')
+let res = document.getElementById('res')
+let genero = ''
 
-    if (fano.value.length == 0 || Number(fano.value) > ano) {
-        window.alert('ERRO')
+
+btn.addEventListener('click', () => {
+    let valor = ano.value
+
+    if (valor.value < 4) {
+        window('Digite um ano valído que contém 4 dígitos.')
+        return
+    }
+
+
+
+
+    let idade = anoAtual - ano.value
+    let img = document.createElement('img')
+    img.setAttribute('id','foto')
+
+    if (ano.value >= anoAtual || Number(ano.value) == 0) {
+        window.alert('ERROR')
     } else {
-        var fsex = document.getElementsByName('sex')
-        var genero = ''
-        var idade = ano - Number(fano.value)
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
 
         if (fsex[0].checked) {
-            genero = 'Homem' 
+            genero = 'Homem'
             if (idade >= 5 && idade <= 10) {
                 img.setAttribute('src', 'imagens/bebe-h.png')
             } else if (idade <= 25) {
@@ -23,7 +36,7 @@ function verificar() {
             } else {
                 img.setAttribute('src', 'imagens/idoso-h.png')
             }
-        } else if (fsex[1].checked) { 
+        } else if (fsex[1].checked) {
             genero = 'Mulher'
             if (idade >= 5 && idade <= 10) {
                 img.setAttribute('src', 'imagens/bebe-m.png')
@@ -36,9 +49,8 @@ function verificar() {
             }
         }
 
-
-        res.innerHTML = `Detectamos ${idade} anos e ${genero}`
+        res.innerHTML = `Detectamos ${genero} e ${idade} anos.`
         res.style.textAlign = 'center'
         res.appendChild(img)
     }
-}
+})

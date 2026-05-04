@@ -50,3 +50,8 @@ footer {
     color: white;
     font-style: italic;
 }
+
+button {
+    padding: 10px;
+    font-size: 1.4em;
+}
