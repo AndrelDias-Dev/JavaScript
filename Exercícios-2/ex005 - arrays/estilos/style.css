@@ -22,6 +22,11 @@ section {
 
 }
 
+button {
+    padding: 10px;
+    font-size: 1.4em;
+}
+
 img {
     display: block;
     margin: auto;

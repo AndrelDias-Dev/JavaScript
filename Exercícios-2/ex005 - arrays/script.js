@@ -1,12 +1,14 @@
 const res = document.getElementById('res')
-const compras = ['arroz', 'feijão', 'lasanha', 'batata', 'peixe']
-let mostrando =  false
+const compras = ['peixe', 'ovos', 'linguiça', 'frango', 'biscoito', 'lasanha']
+let mostrando = false
 
-compras.push('ovo', 'macarrão', 'alface')
+compras.push('morango', 'abacaxi', 'maçã', 'uvas')
 compras.sort()
 
-const lista = () => {
-    res.innerHTML = `${compras.join(', ')}`
+
+
+const compra = () => {
+    res.innerHTML += `${compras.join(', ')}`
 }
 
 const limpar = () => {
@@ -16,14 +18,18 @@ const limpar = () => {
 document.getElementById('btn').addEventListener('click', () => {
 
     if (mostrando === false) {
-        lista()
         mostrando = true
+        compra()
     } else {
-        limpar()
         mostrando = false
-        
+        limpar()
     }
 })
+
+
+
+
+
 
 
 
