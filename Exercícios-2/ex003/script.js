@@ -1,30 +1,38 @@
-let ini = document.getElementById('ini')
-let fim = document.getElementById('fim')
-let pas = document.getElementById('pas')
-let res = document.getElementById('res')
+const ini = document.getElementById('ini')
+const pas = document.getElementById('pas')
+const fim = document.getElementById('fim')
+const res = document.getElementById('res')
+
 
 document.getElementById('btn').addEventListener('click', () => {
-    if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
-        window.alert('ERROR')
-        return
-    } 
 
     let i = Number(ini.value)
-    let f = Number(fim.value)
     let p = Number(pas.value)
-    res.innerHTML = ''
+    let f = Number(fim.value)
 
-    if (i < f) {
-        for (let c = i; c <= f; c += p) {
-        res.innerHTML += ` ${c} 👉`
-    }
+    if (ini.value.length == 0 || pas.value.length == 0 || fim.value.length == 0) {
+        window.alert('ERROR')
     } else {
-        for (let c = i; c >= f; c -= p) {
-        res.innerHTML += ` ${c} 👉`
+        res.innerHTML = ''
+
+        if (i < f) {
+            for (let c = i; c < f; c += p) {
+                res.innerHTML += ` ${c} 👉`
+            }
+        }
+
+        if (i > f) {
+            for (let c = i; c > f; c -= p) {
+                res.innerHTML += ` ${c} 👉`
+            }
+
+        }
     }
-    }
+
+
+
+
+
 
 })
-
-
 
