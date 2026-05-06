@@ -22,6 +22,11 @@ section {
 
 }
 
+select {
+    width: 208px;
+    
+}
+
 button {
     padding: 10px;
     font-size: 1.4em;
