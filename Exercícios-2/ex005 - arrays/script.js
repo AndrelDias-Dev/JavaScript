@@ -1,31 +1,17 @@
 const res = document.getElementById('res')
-const compras = ['peixe', 'ovos', 'linguiça', 'frango', 'biscoito', 'lasanha']
+let lista = ['ovos', 'arroz', 'quiabo', 'farinha', 'lasanha', 'alface']
 let mostrando = false
 
-compras.push('morango', 'abacaxi', 'maçã', 'uvas')
-compras.sort()
+lista.push('pizza', 'linguiça', 'biscoito', 'frango')
+lista.sort()
 
-
-
-const compra = () => {
-    res.innerHTML += `${compras.join(', ')}`
-}
-
-const limpar = () => {
-    res.innerHTML = ''
-}
+res.innerHTML = lista.join(', ')
 
 document.getElementById('btn').addEventListener('click', () => {
 
-    if (mostrando === false) {
-        mostrando = true
-        compra()
-    } else {
-        mostrando = false
-        limpar()
-    }
+    res.classList.toggle('hidden')
+    
 })
-
 
 
 
