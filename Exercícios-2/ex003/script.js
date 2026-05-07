@@ -1,38 +1,27 @@
 const ini = document.getElementById('ini')
-const pas = document.getElementById('pas')
 const fim = document.getElementById('fim')
+const pas = document.getElementById('pas')
 const res = document.getElementById('res')
-
 
 document.getElementById('btn').addEventListener('click', () => {
 
-    let i = Number(ini.value)
-    let p = Number(pas.value)
-    let f = Number(fim.value)
+    i = Number(ini.value)
+    f = Number(fim.value)
+    p = Number(pas.value)
 
-    if (ini.value.length == 0 || pas.value.length == 0 || fim.value.length == 0) {
-        window.alert('ERROR')
+    res.innerHTML = ''
+
+    if (i < f) {
+        for (let c = i; c < f; c += p) {
+            res.innerHTML += ` ${c} 👉`
+        }
     } else {
-        res.innerHTML = ''
-
-        if (i < f) {
-            for (let c = i; c < f; c += p) {
-                res.innerHTML += ` ${c} 👉`
-            }
-        }
-
-        if (i > f) {
-            for (let c = i; c > f; c -= p) {
-                res.innerHTML += ` ${c} 👉`
-            }
-
-        }
+        for (let c = i; c > f; c -= p) {
+            res.innerHTML += ` ${c} 👉`
+        }       
     }
-
-
-
-
+    res.innerHTML += `🏳️`
+    
 
 
 })
-
