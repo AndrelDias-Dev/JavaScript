@@ -1,42 +1,36 @@
-const calc = document.getElementById('btn');
+const btn = document.getElementById('btn')
 
 function imc() {
-
-    const nam = document.getElementById('nam').value;
+    const name = document.getElementById('nam').value;
     const alt = document.getElementById('alt').value;
-    const pes = document.getElementById('pes').value;
+    const peso = document.getElementById('pes').value;
     const res = document.getElementById('res')
-    
 
-    if (nam !== '' && alt !== '' && pes !== '') {
+    if (name !== '' && alt !== '' && peso !== '') {
 
-        const valorIMC = (pes / (alt * alt)).toFixed(1);
-
-        let classificacao = ''
+        const valorIMC = (peso / (alt * alt)).toFixed(1);
+        let classificacao = '';
 
         if (valorIMC < 18.5) {
-            classificacao = 'abaixo do peso.';
+            classificacao = 'levemente abaixo do peso'
         } else if (valorIMC < 24.9) {
-            classificacao = 'com o peso ideal. Parabéns!!!'
-        } else if (valorIMC < 30) {
-            classificacao = 'levemente acima do peso.'
-        } else if (valorIMC < 35) {
+            classificacao = 'com o peso ideal'
+        } else if (valorIMC < 29.9) {
+            classificacao = 'levemente acima do peso'
+        } else if (valorIMC < 34.9) {
             classificacao = 'com obesidade grau I'
-        } else if (valorIMC < 40) {
+        } else if (valorIMC < 39.9) {
             classificacao = 'com obesidade grau II'
         } else {
-            classificacao = 'com obesidade grau III. Procure um Hospital emediatamente!!!.'
+            classificacao = 'com obesidade grau III'
         }
 
-        res.textContent = `${nam} seu IMC é ${valorIMC} e você está ${classificacao}`
-
-        
-        
-
+        res.textContent = `${name} seu IMC é ${valorIMC} e você está ${classificacao}`;
     } else {
-        res.textContent = 'Preencha todos os campos!!!'
-        res.style.textAlign = 'left'
+        res.textContent = 'Preencha todos os campos'
+        
     }
 }
 
-calc.addEventListener('click', imc);
+btn.addEventListener('click', (imc));
+
