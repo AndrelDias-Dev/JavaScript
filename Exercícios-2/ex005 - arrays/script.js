@@ -1,18 +1,16 @@
 const res = document.getElementById('res')
-let lista = ['ovos', 'arroz', 'quiabo', 'farinha', 'lasanha', 'alface']
-let mostrando = false
+const lista = ['ovos', 'leite', 'biscoito', 'frango', 'quiabo', 'bife']
 
-lista.push('pizza', 'linguiça', 'biscoito', 'frango')
+lista.push('batata', 'coxinha', 'empanado', 'amendoim')
 lista.sort()
-
-res.innerHTML = lista.join(', ')
 
 document.getElementById('btn').addEventListener('click', () => {
 
-    res.classList.toggle('hidden')
-    
-})
+    res.innerHTML = `${lista.join(', ')}` + '.'
 
+
+    res.classList.toggle('hidden')
+})
 
 
 
