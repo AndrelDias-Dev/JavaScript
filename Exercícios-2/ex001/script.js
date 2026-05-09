@@ -1,21 +1,15 @@
-let msg = document.getElementById('msg')
-let img = document.getElementById('img')
+const msg = document.getElementById('msg')
+const img = document.getElementById('img')
 let hora = new Date().getHours()
 
 
-if (hora >= 5 && hora <= 11) {
+if (hora >= 6 && hora <= 11) {
     msg.innerHTML = 'Bom dia!'
     img.src = 'imagens/manha.png'
-} else if (hora >= 12 && hora <= 17) {
-    msg.innerHTML = 'Boa Tarde!'
+} else if (hora >= 12 && hora <= 18) {
+    msg.innerHTML = 'Bom tarde!'
     img.src = 'imagens/tarde.png'
-} else if (hora >= 18 && hora <= 23){
-    msg.innerHTML = 'Boa Noite!'
-    img.src = 'imagens/noite.png'
 } else {
-    msg.innerHTML = 'Boa Madruga!'
+    msg.innerHTML = 'Bom noite!'
+    img.src = 'imagens/noite.png'
 }
-
-
-
-
