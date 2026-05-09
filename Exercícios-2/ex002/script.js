@@ -1,16 +1,17 @@
-const num = document.getElementById('num')
-const res = document.getElementById('res')
-const ano = new Date().getFullYear()
+let num = document.getElementById('num')
+let anoAtual = new Date().getFullYear()
+let res = document.getElementById('res')
 
 document.getElementById('btn').addEventListener('click', () => {
+    
 
-    if (num.value.length == 0 || num.value.length >= num) {
-        window.alert('Error')
+    if (num.value.length == 0 || num.value >= anoAtual) {
+        window.alert('Erro')
     } else {
-        fsex = document.getElementsByName('sex')
-        idade = ano - Number(num.value)
-        genero = ''
-        let img = document.createElement('img')
+        let genero = ''
+        let idade = anoAtual - Number(num.value)
+        let fsex = document.getElementsByName('sex')
+        const img = document.createElement('img')
         img.setAttribute('id', 'foto')
 
         if (fsex[0].checked) {
@@ -35,9 +36,9 @@ document.getElementById('btn').addEventListener('click', () => {
             } else {
                 img.setAttribute('src', 'imagens/idoso-m.png')
             }
-
         }
-        res.innerHTML = ''
+        res.innerHTML = `Detectamos ${idade} anos e ${genero}.`
+        res.style.textAlign = 'center'
         res.appendChild(img)
     }
 })
