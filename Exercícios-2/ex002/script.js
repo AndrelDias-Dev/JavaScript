@@ -1,23 +1,22 @@
-
-const btn = document.getElementById('btn-form')
-
-
+const btn = document.getElementById('btn')
 btn.addEventListener('click', () => {
-
-    const num = document.getElementById('nas')
-    const ano = new Date().getFullYear()
+    
+    let img = document.createElement('img')
+        
     const fsex = document.getElementsByName('sex')
     const res = document.getElementById('res')
-    let img = document.createElement('img')
-    img.setAttribute('id', 'foto')
-    genero = ''
+    const anoAtual = new Date().getFullYear()
+    const ano = document.getElementById('num')
+    const idade = anoAtual - Number(ano.value)
+    let genero = ''
     res.innerHTML = ''
 
-    if (num.value.length == 0 || num.value >= ano) {
+    if (ano.value.length == 0 || ano.value >= anoAtual) {
         window.alert('Error')
     } else {
 
-        let idade = ano - Number(num.value)
+        let img = document.createElement('img')
+        img.setAttribute('id', 'foto')
 
         if (fsex[0].checked) {
             genero = 'Homem'
@@ -38,14 +37,17 @@ btn.addEventListener('click', () => {
                 img.setAttribute('src', 'imagens/jovem-m.png')
             } else if (idade <= 50) {
                 img.setAttribute('src', 'imagens/adulto-m.png')
-            } else {
+            } else 
                 img.setAttribute('src', 'imagens/idoso-m.png')
-            }
-        }
-        
-        res.innerHTML = `Detectamos ${genero} e ${idade} anos.`
+}
+res.innerHTML = `Detectamos ${genero} e ${idade} anos.`
         res.style.textAlign = 'center'
         res.appendChild(img)
-    }
-})
+}
+}
+            
+            
+        
 
+)        
+        
