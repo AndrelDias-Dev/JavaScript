@@ -24,11 +24,11 @@ btn.addEventListener('click', () => {
     if (i < f) {
         for (let c = i; c < f; c += p) {
         res.innerHTML += `👉 ${c} `
-    }
+    } 
     } else {
         for (let c = i; c > f; c -= p) {
         res.innerHTML += `👉 ${c} `
     }
-    
+}
 }
 })
