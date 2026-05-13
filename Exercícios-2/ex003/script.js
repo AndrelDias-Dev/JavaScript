@@ -21,9 +21,12 @@ btn.addEventListener('click', () => {
 } else {
 
     
-    
-
-    for (let c = i; c < f; c += p) {
+    if (i < f) {
+        for (let c = i; c < f; c += p) {
+        res.innerHTML += `👉 ${c} `
+    }
+    } else {
+        for (let c = i; c > f; c -= p) {
         res.innerHTML += `👉 ${c} `
     }
     
