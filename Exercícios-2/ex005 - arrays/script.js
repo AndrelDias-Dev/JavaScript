@@ -1,15 +1,22 @@
-const res = document.getElementById('res')
-const lista = ['ovos', 'leite', 'biscoito', 'frango', 'quiabo', 'bife']
+const btn = document.getElementById('btn')
 
-lista.push('batata', 'coxinha', 'empanado', 'amendoim')
-lista.sort()
+btn.addEventListener('click', () => {
+    let res = document.getElementById('res')
+    let ficha = {nome: 'Guky',
+                        idade: 23,
+                        estudante: 'Programação',
+                        nascimento: 2003,
+                        profissão: 'Não tem'
+                       }
+                 
+                 
+                 
+              
 
-document.getElementById('btn').addEventListener('click', () => {
 
-    res.innerHTML = `${lista.join(', ')}` + '.'
+    
 
-
-    res.classList.toggle('hidden')
+    res.innerHTML = JSON.stringify(ficha, null, 2)
 })
 
 
