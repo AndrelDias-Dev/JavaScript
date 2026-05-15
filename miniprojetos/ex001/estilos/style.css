@@ -1,25 +1,15 @@
-@charset "UTF-8";
-
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-size: 1.3rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: gray;
 }
 
 header {
     background-color: black;
     color: white;
-    padding: 20px 20px;
+    padding: 1rem;
     position: relative;
-    transition: .3s ease;
 
     display: flex;
     justify-content: space-between;
@@ -27,103 +17,128 @@ header {
     flex-wrap: wrap;
 }
 
-header div#logo h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-}
-
-header div#logo {
+header .logo {
+    font-size: 3rem;
+    font-weight: bolder;
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    
     flex: 1 400px;
-    margin-bottom: 10px;
 }
 
-header button#btn-menu {
+header .btn-menu {
     width: 40px;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
+    border: none;
     color: white;
-    border: 0;
 }
 
-header #menu {
+header .menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: black;
+
+    background-color: rgb(89, 89, 89);
     width: 100%;
     height: 100vh;
+    gap: 10px;
+    padding: 10px;
     opacity: 0;
     pointer-events: none;
-    transform: translateX(-100%);
-    transition: .3s ease;
-
+    transform: translateX(100%);
+    transition: .3s;
 }
 
-header #menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    transition: .3s ease;
-    font-weight: bolder;
-}
-
-header #menu a:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
-
-header #menu.active {
+header .menu.active {
     display: flex;
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
 }
 
-header #btn-login {
-    width: 200px;
-    margin: auto;
-    border-radius: 10px;
-    border: 0;
-    padding: 10px;
-    font-size: 1.4rem;
-    font-weight: bolder;
-    background-color: rgb(81, 0, 255);
+header .menu-link {
     color: white;
+    padding: 1rem;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    background-color: rgb(75, 75, 75);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.35);
+    border-radius: 5px;
 }
 
-header #btn-login:hover {
-    background-color: rgb(118, 54, 255);
+header .menu-link:hover {
+    color: black;
+    background-color: white;
+}
+
+header .btn-login {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 0px;
+}
+
+header .btn-login:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
     cursor: pointer;
+    box-shadow:  rgb(0, 0, 0, 0.40);
 }
 
-@media screen and (min-width: 768px) {
+dialog  {
+    border: none;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+}
 
-    header button#btn-menu {
-        display: none;
-    }
+dialog.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
 
-    header #menu {
-        opacity: 1;
-        position: static;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        width: auto;
-        height: auto;
-        gap: 10px;
-        transform: none;
-        pointer-events: auto;
-    }
+dialog::backdrop {
+    background: rgb(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+}
 
+div.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+  
     
+}
 
+form#formulario {
     
+    
+}
 
+div.form-header {
+    
+}
 
+div.form-content {
+    
+}
 
-
+div.form-footer {
+  
 }

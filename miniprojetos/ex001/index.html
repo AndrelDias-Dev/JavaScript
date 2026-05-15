@@ -10,33 +10,75 @@
 
 <body>
     <header>
-
-        <div id="logo">
-            <h1>Logo</h1>
+        <div class="logo">
+            Logo
         </div>
 
-        <button id="btn-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        <button class="btn-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu-icon lucide-menu">
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
+            </svg>
         </button>
 
-        <nav id="menu">
+        <nav class="menu">
 
-            <a href="#">Início</a>
+            <a href="#" class="menu-link">Início</a>
 
-            <a href="#">Curiosidades</a>
+            <a href="#" class="menu-link">Curiosidades</a>
 
-            <a href="#">Notícias</a>
+            <a href="#" class="menu-link">Notícias</a>
 
-            <a href="#">Sobre</a>
+            <a href="#" class="menu-link">Sobre</a>
 
-            <button id="btn-login">
+            <button class="btn-login" id="openModal">
                 Fazer Login
             </button>
 
+            <dialog id="modal">
+                <div class="modal-content">
+
+                    <form id="formulario">
+                        <div class="form-header">
+                            <h2>Fazer Login</h2>
+                            <button id="closeModal">X</button>
+                        </div>
+                        <div class="form-content">
+                            <h3>Preencha todos os campos abaixo e confirme</h3>
+                            <div>
+                                <label for="imail">Email</label>
+                                <input type="email"
+                                 name="email" 
+                                 id="imail" 
+                                 placeholder="example@hotmail.com"
+                                >
+                            </div>
+                            <div>
+                                <label for="isen">Senha</label>
+                                <input type="password"
+                                 name="senha"
+                                 id="isen"
+                                 placeholder="•••••••••••"
+                                >
+                            </div>
+                            <div class="form-footer">
+                                <button id="confirmModal">
+                                    Confirmar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </dialog>
+
+
+
         </nav>
-
     </header>
-
     <script src="script.js"></script>
 </body>
 

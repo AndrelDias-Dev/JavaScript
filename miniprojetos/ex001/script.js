@@ -1,7 +1,34 @@
-const btn = document.getElementById('btn-menu')
-const menu = document.getElementById('menu')
+const btnMenu = document.querySelector('.btn-menu')
+const menu = document.querySelector('.menu')
+const btnLogin = document.querySelector('.btn-login')
+const links = document.querySelectorAll('.menu-link')
+const modal = document.querySelector('#modal')
+const btnClose = document.querySelector('#closeModal')
+const btnConfirm = document.querySelector('#confirmModal')
 
-btn.addEventListener('click', () => {
 
+btnMenu.addEventListener('click', () => {
     menu.classList.toggle('active')
 })
+
+btnLogin.addEventListener('click', () => {
+
+    modal.classList.toggle('active')
+    
+
+    modal.showModal()
+})
+
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        
+        modal.classList.remove('active')
+
+        modal.close()
+
+        
+    } 
+})
+
+
+
