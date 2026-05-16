@@ -118,27 +118,30 @@ dialog::backdrop {
 }
 
 div.modal-content {
-    background-color: white;
-    border-radius: 10px;
-    border: none;
-    overflow: hidden;
-  
-    
+    width: 100%;
+    max-width: 400px;
+
+    background-color: #fff;
+
+    border-radius: 16px;
+
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    animation: modalFade 0.3s ease;
+ 
 }
 
-form#formulario {
-    
-    
+.input-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
 }
 
-div.form-header {
-    
-}
-
-div.form-content {
-    
-}
-
-div.form-footer {
-  
+.input-group label {
+    width: 80px;
 }

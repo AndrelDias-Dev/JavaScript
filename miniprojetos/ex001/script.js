@@ -11,6 +11,12 @@ btnMenu.addEventListener('click', () => {
     menu.classList.toggle('active')
 })
 
+btnClose.addEventListener('click', () => {
+    
+    modal.classList.remove('active')
+
+    modal.close()
+})
 btnLogin.addEventListener('click', () => {
 
     modal.classList.toggle('active')
@@ -18,6 +24,8 @@ btnLogin.addEventListener('click', () => {
 
     modal.showModal()
 })
+
+
 
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
