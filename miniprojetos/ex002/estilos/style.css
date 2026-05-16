@@ -1,5 +1,30 @@
 @charset "UTF-8";
 
+*:not(dialog) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button#openModal {
+    margin: auto;
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid rgb(167, 167, 167);
+    cursor: pointer;
 }
