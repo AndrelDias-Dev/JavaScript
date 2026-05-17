@@ -1,99 +1,86 @@
-*{
-    margin: 0px;
+*:not(dialog) {
     padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
+body {
+    width: 100vw;
+    height: 100vh;
     background-color: black;
-    color: white;
-    padding: 1rem;
-    position: relative;
+    color: rgb(0, 0, 0);
+}
 
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: rgb(131, 131, 131);
+    position: relative;
 }
 
-header .logo {
-    font-size: 3rem;
-    font-weight: bolder;
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
+
+
+.menu {
+    font-size: clamp(1.125rem, 3vw, 1.4rem);
+    background-color: rgb(70, 70, 70);
+    width: 100vw;
+    height: 100vh;
     
-    flex: 1 400px;
-}
 
-header .btn-menu {
-    width: 40px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    color: white;
-}
-
-header .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
-
-    background-color: rgb(89, 89, 89);
-    width: 100%;
-    height: 100vh;
-    gap: 10px;
-    padding: 10px;
+    
     opacity: 0;
     pointer-events: none;
-    transform: translateX(100%);
-    transition: .3s;
+    transform: translate(100%);
+    transition: .2s ease;
+    
 }
 
-header .menu.active {
+.menu.active {
     display: flex;
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(0);
+    transform:translate(0);
 }
 
-header .menu-link {
+.menu-link {
     color: white;
-    padding: 1rem;
     text-decoration: none;
+    padding: 1rem 0.5rem;
     width: 100%;
-    text-align: center;
-    font-weight: bolder;
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
-    background-color: rgb(75, 75, 75);
-    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.35);
-    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-header .menu-link:hover {
+.menu-link:hover {
+    background-color: rgb(155, 155, 155);
     color: black;
-    background-color: white;
 }
 
-header .btn-login {
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
+.btn-login {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
     font-weight: bolder;
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
     border-radius: 5px;
-    border: 0px;
+    border: none;
 }
 
-header .btn-login:hover {
-    background-color: rgb(0, 0, 0);
+.btn-menu {
+    margin-right: 10px;
+    width: 40px;
+    background: transparent;
+    border: none;
     color: white;
     cursor: pointer;
-    box-shadow:  rgb(0, 0, 0, 0.40);
 }
-
 
 
 

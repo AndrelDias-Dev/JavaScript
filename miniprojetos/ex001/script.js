@@ -1,17 +1,18 @@
 const btnMenu = document.querySelector('.btn-menu')
-const menu = document.querySelector('.menu')
+let menu = document.querySelector('.menu')
+let links = document.querySelectorAll('.menu-link')
+
 
 btnMenu.addEventListener('click', () => {
 
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active')
-    } else {
-        menu.classList.add('active')
-    }
-
+    menu.classList.toggle('active')  
 
 })
 
-
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active')
+    })
+})
 
 
