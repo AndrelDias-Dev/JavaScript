@@ -1,18 +1,24 @@
-const btnMenu = document.querySelector('.btn-menu')
-let menu = document.querySelector('.menu')
-let links = document.querySelectorAll('.menu-link')
+const menuBtn = document.getElementById('btn-menu')
+const menu = document.querySelector('.menu')
+const link = document.querySelectorAll('.menu-link')
+const iconMenu = document.getElementById('iconMenu')
 
+menuBtn.addEventListener('click', () => {
 
-btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('active')
 
-    menu.classList.toggle('active')  
+    if (menu.classList.contains('active')) {
+        iconMenu.classList.remove('fa-bars')
+        iconMenu.classList.add('fa-times', 'maior')
+    } else {
+        iconMenu.classList.remove('fa-times', 'maior')
+        iconMenu.classList.add('fa-bars')
+    }
 
 })
 
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('active')
-    })
-})
+
+
+
 
 

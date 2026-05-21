@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/style.css">
     <title>Menu Hamburguer</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <h1>Logo</h1>
         </div>
 
-        <button class="btn-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        <button id="btn-menu">
+            <i id="iconMenu" class="fa-solid fa-bars"></i>
         </button>
 
-        <nav class="menu">
-            <a class="menu-link" href="#">Início</a>
-            <a class="menu-link" href="#">Curiosidades</a>
-            <a class="menu-link" href="#">Notícias</a>
-            <a class="menu-link" href="#">Sobre</a>
 
-            <button class="btn-login">
-                Fazer Login
-            </button>
-        </nav>
+        <ul class="menu">
+            <li>
+                <a class="menu-link" href="#">Início</a>
+            </li>
+            <li>
+                <a class="menu-link" href="#">Curiosidades</a>
+            </li>
+            <li>
+                <a class="menu-link" href="#">Sobre</a>
+            </li>
+            <li>
+                <a class="menu-link" href="#">Contato</a>
+            </li>
+        </ul>
+
     </header>
+
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
