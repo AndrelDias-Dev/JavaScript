@@ -17,6 +17,14 @@ menuBtn.addEventListener('click', () => {
 
 })
 
+link.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active')
+        iconMenu.classList.remove('fa-times', 'maior')
+        iconMenu.classList.add('fa-bars')
+    })
+})
+
 
 
 
