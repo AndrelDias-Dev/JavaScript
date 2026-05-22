@@ -15,18 +15,21 @@
 
     <dialog class="modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2>Faça o Login</h2>
-                <button class="close-modal">
-                    X
-                </button>
-            </div>
+
             <div class="modal-main">
                 <form method="post" autocomplete="off">
+                    <div class="modal-header">
+                        <h2>Faça o Login</h2>
 
+                        <button class="close-modal">
+                            X
+                        </button>
+                    </div>
                     <div class="modal-input">
                         <label for="imail">email</label>
-                        <input type="email" name="email" id="imail">
+                        <input type="email"
+                         name="email"
+                        id="imail">
                     </div>
 
                     <div class="modal-input">
@@ -34,13 +37,14 @@
                         <input type="password" name="senha" id="isen">
                     </div>
 
+                    <div class="modal-footer">
+                        <button class="btnConfirm">
+                            Confirmar
+                        </button>
+                    </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button class="btnConfirm">
-                    Confirmar
-                </button>
-            </div>
+
         </div>
     </dialog>
 
