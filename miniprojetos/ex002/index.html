@@ -4,50 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/style.css">
     <title>Modal</title>
 </head>
 
 <body>
-    <button class="open-modal">
-        Open Modal
+    <button class="btn-open">
+            Open Modal
     </button>
 
     <dialog class="modal">
-        <div class="modal-content">
+        <form method="dialog">
+            <div class="modal-header">
+                <h2>Faça o Login</h2>
 
-            <div class="modal-main">
-                <form method="post" autocomplete="off">
-                    <div class="modal-header">
-                        <h2>Faça o Login</h2>
-
-                        <button class="close-modal">
-                            X
-                        </button>
-                    </div>
-                    <div class="modal-input">
-                        <label for="imail">email</label>
-                        <input type="email"
-                         name="email"
-                        id="imail">
-                    </div>
-
-                    <div class="modal-input">
-                        <label for="isen">senha</label>
-                        <input type="password" name="senha" id="isen">
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="btnConfirm">
-                            Confirmar
-                        </button>
-                    </div>
-                </form>
+                <button class="btn-close">
+                    <i class="fa-solid fa-x"></i>
+                </button>
             </div>
 
-        </div>
-    </dialog>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="email">Email</label>
 
+                    <input type="email" name="email" id="email" placeholder="example@hotmail.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+
+                    <input type="password" name="senha" id="senha" placeholder="•••••••">
+                </div>
+            </div>
+
+            <div class="password-options">
+                <div class="remember-password">
+                    <input type="checkbox" name="remember" id="remember">
+
+                    <label for="remember">Lembrar Senha</label>
+                </div>
+
+                <a href="#">Esqueceu a Senha</a>
+            </div>
+
+            <button class="btn-login">
+                Logar na sua conta
+            </button>
+
+            <div class="register">
+                <span>Não cadastrado?</span>
+                
+                <a href="#">Faça login agora</a>
+            </div>
+        </form>
+    </dialog>
 
     <script src="script.js"></script>
 </body>

@@ -1,13 +1,10 @@
-const openModal = document.querySelector('.open-modal')
+const btnOpen = document.querySelector('.btn-open')
 const modal = document.querySelector('.modal')
-const closeModal = document.querySelector('.close-modal')
 
-openModal.addEventListener('click', () => {
-    modal.classList.add('active')
+
+
+btnOpen.addEventListener('click', () => {
+
+    modal.showModal()
 })
-
-closeModal.addEventListener('click', () => {
-    modal.classList.remove('active')
-})
-
 
