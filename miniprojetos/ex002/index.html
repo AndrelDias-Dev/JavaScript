@@ -4,13 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/style.css">
     <title>Modal</title>
 </head>
 
 <body>
- 
+    <button class="open-modal">
+        Open Modal
+    </button>
+
+    <dialog class="modal">
+
+        <form method="post">
+            <div class="modal-header">
+                <div class="logo">
+                    <h2>Faça seu Login</h2>
+                </div>
+
+                <button class="btn-close" type="button">
+                    X
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@hotmail.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="●●●●●●●●●●●●●●">
+                </div>
+
+                <div class="password-options">
+                    <div class="remember">
+                        <input type="checkbox" name="remem" id="remem">
+                        <label for="remem">Lembrar Senha</label>
+                    </div>
+
+                    <div class="forget">
+                        <a href="#">Esqueceu a Senha</a>
+                    </div>
+                </div>
+
+                <button class="btn-login" type="submit">
+                    Entrar na conta
+                </button>
+
+                <div class="register">
+                    <div class="login">
+                        Já fez Login?
+                    </div>
+
+                    <div class="cadastro">
+                        <a href="#">Cadastre-se</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 
