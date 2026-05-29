@@ -1,20 +1,23 @@
-const openMenu = document.querySelector('.open-modal')
+const btnOpen = document.querySelector('.open-modal')
+const btnClose = document.querySelector('.btn-close')
 const modal = document.querySelector('.modal')
-let clickStardedInside = false
+let clickStartedInside = false
 
-openMenu.addEventListener('click', () => {
+btnOpen.addEventListener('click', () => {modal.showModal()})
+btnClose.addEventListener('click', () => {modal.close()})
 
-    modal.showModal()
-})
-
-modal.addEventListener('mousedown', (event) => {
-
-    clickStardedInside = event.target !== modal
+modal.addEventListener('mousedown', () => {
+    
+    if (event.target !== modal) {
+        clickStartedInside = true
+    } else {
+        clickStartedInside = false
+    }
 })
 
 modal.addEventListener('mouseup', (event) => {
-
-    if (!clickStardedInside && event.target === modal) {
+    
+    if (!clickStartedInside && event.target === modal) {
         modal.close()
     }
 })
