@@ -29,8 +29,8 @@ i {
 }
 
 .accordion {
-    background-color: white;
-    padding: 10px;
+    background-color: rgb(255, 94, 0);
+    padding: 20px;
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
@@ -51,22 +51,24 @@ i {
     max-width: 100%;
     white-space: nowrap;
     overflow-x: hidden;
-    text-overflow: ellipsis;
-    
-    
+    text-overflow: ellipsis;  
 }
 
 .accordion-body {
     opacity: 0;
     height: 0;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .accordion-body.active {
     opacity: 1;
     height: 100%;
-    padding: 5px;
+    text-align: justify;
+    margin-top: 8px;
 }
 
-accordion:has(.arrow) {
-    transform: translate(180deg);
+.accordion:has(.active) .arrow  {
+    transform: rotate(180deg);
+    transition: .2s linear;
 }
