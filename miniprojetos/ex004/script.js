@@ -1,0 +1,23 @@
+const btnTab = document.querySelectorAll('.tab-btn')
+
+btnTab.forEach(tab => tab.addEventListener('click' , () => clickTab(tab)))
+
+const clickTab = (tab) => {
+    btnTab.forEach(tab => tab.classList.remove('active'))
+    tab.classList.add('active');
+
+
+    const contents = document.querySelectorAll('.content')
+    contents.forEach(content => content.classList.remove('show'))
+
+    const contentId = tab.getAttribute('content-id');
+    const content = document.getElementById(contentId)
+
+    content.classList.add('show')
+
+}
+
+    
+    
+    
+
