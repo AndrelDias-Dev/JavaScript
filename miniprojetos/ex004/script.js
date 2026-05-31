@@ -1,9 +1,11 @@
-const btnTab = document.querySelectorAll('.btn-tab')
+const tabs = document.querySelectorAll('.btn-tab')
 
-btnTab.forEach(tab => tab.addEventListener('click', () => tabClicked(tab)));
+tabs.forEach(tab => tab.addEventListener('click', () => clickTab(tab)))
 
-const tabClicked = (tab) => {
-    btnTab.forEach(tab => tab.classList.remove('active'))
+
+const clickTab = (tab) => {
+
+    tabs.forEach(tab => tab.classList.remove('active'))
     tab.classList.add('active')
 
     const contents = document.querySelectorAll('.content')
@@ -12,12 +14,6 @@ const tabClicked = (tab) => {
     const contentId = tab.getAttribute('content-id')
     const content = document.getElementById(contentId)
 
-
-
     content.classList.add('show')
-
     
 }
-    
-    
-

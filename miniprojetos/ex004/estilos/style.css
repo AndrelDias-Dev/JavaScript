@@ -9,57 +9,60 @@
 
 body {
     width: 100vw;
-    height: 100vh;
-    background-color: gray;
+    height:100vh;
+    background-color: dimgray;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content-img {
-    width: 50%;
-    max-width: 400px;
-}
-
-.container  {
-    display: flex;
-    flex-direction: column;
+.container {
     background-color: white;
     width: 90vw;
-    max-width: 700px;
     padding: 20px;
     border-radius: 8px;
 }
 
 .content {
     display: none;
-    background-color: rgb(84, 0, 125);
-    border-radius: 0px 10px 10px 10px;
     padding: 10px;
+    border-radius: 0px 8px 8px 8px;
+    background-color: rgb(102, 0, 176);
     color: white;
+    
 }
 
 .content.show {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.content-img {
+    width: 50%;
+    max-width: 500px;
+    
 }
 
 .btn-tab {
     padding: 10px;
     font-size: 1.1rem;
     border-radius: 10px 10px 0px 0px;
-    background-color: rgb(61, 0, 91);
-    color: rgb(0, 0, 0);
     border: none;
+    background-color: rgb(102, 0, 176);
     font-weight: bold;
+}
+.btn-tab:hover {
+    background-color: rgb(149, 0, 255);
     cursor: pointer;
 }
 
 .btn-tab.active {
     color: white;
-    background-color: rgb(84, 0, 125);
+    background-color: rgb(149, 0, 255);
 }
 
-.btn-tab:hover {
-    background-color: rgb(110, 0, 164);
-}
+
+
