@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
     margin: 0px;
     padding: 0px;
@@ -8,53 +10,58 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.content-img {
-    width: 50%;
+    background-color: gray;
 }
 
 .container {
     background-color: white;
+
     width: 90vw;
     padding: 20px;
     border-radius: 8px;
+
+}
+
+.content-img {
+    width: 50%;
+    max-width: 500px;
 }
 
 .content {
     display: none;
-    background-image: linear-gradient(to right, salmon, rgb(255, 183, 175));
-    color: white;
+    background-color: rgb(246, 255, 0);
     padding: 10px;
     border-radius: 0px 8px 8px 8px;
-    text-align: justify;
 }
 
 .content.show {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .btn-tab {
     padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: 8px 8px 0px 0px;
     border: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background-image: linear-gradient(to right, salmon, rgb(255, 183, 175));
+    background-color: rgb(168, 174, 0);
+    cursor: pointer;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    transition: background-color .3s;
+    color: white;
 }
 
 .btn-tab.active {
-    background-image: linear-gradient(to right, rgb(255, 69, 48), rgb(255, 89, 71));
+    color: black;
+    background-color: rgb(246, 255, 0);
 }
 
 .btn-tab:hover {
-    background-image: linear-gradient(to right, rgb(255, 69, 48), rgb(255, 89, 71));
-    cursor: pointer;
+    background-color: rgb(204, 211, 0);
 }
-
