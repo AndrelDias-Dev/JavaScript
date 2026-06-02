@@ -14,5 +14,4 @@ const clickTab = (tab) => {
     const content = document.getElementById(contentId)
 
     content.classList.add('show')
-
 }
