@@ -4,6 +4,7 @@ accordions.forEach(accordion => {
     accordion.addEventListener('click', () => {
         const body = accordion.querySelector('.accordion-body')
 
-        body.classList.toggle('active')
+        body.forEach(body => body.classList.remove('active'))
+        body.classList.add('active')
     })
 })

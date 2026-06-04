@@ -1,8 +1,8 @@
 const btnTab = document.querySelectorAll('.btn-tab')
 
-btnTab.forEach(tab => tab.addEventListener('click', () => clickTab(tab)))
+btnTab.forEach(tab => tab.addEventListener('click', () => tabClicked(tab)))
 
-const clickTab = (tab) => {
+tabClicked = (tab) => {
 
     btnTab.forEach(tab => tab.classList.remove('active'))
     tab.classList.add('active')

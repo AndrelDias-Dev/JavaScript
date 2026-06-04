@@ -4,59 +4,85 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background-color: burlywood;
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: cornflowerblue;
+}
+
+.content-img {
+    width: 50%;
 }
 
 .container {
     width: 90vw;
-    background-color: gainsboro;
     padding: 20px;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    box-shadow: 3px 3px 8px rgb(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .content {
-    display: none;
-    background-color: rgb(170, 255, 255);
-    color: black;
+    background-color: rgb(0, 255, 187);
+    text-align: justify;
     padding: 10px;
     border-radius: 0px 8px 8px 8px;
-    text-align: justify;
-    
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    transition: .3s;
 }
 
 .content.show {
-    display: block;
+    display: flex;
+}
+
+.infos {
+    font-size:clamp(1rem, 2vw, 2rem);
+    width: 50%;
 }
 
 .btn-tab {
-    padding: 5px;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-    font-weight: bolder;
-    border-radius: 8px 8px 0px 0px;
-    background-color: rgb(98, 148, 148);
+    background-color: rgb(0, 195, 143);
     border: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(254, 245, 209);
     cursor: pointer;
+    border-radius: 8px 8px 0px 0px;
     transition: .4s;
 }
 
-.btn-tab:hover {
-    background-color: rgb(83, 125, 125);
-}
-
 .btn-tab.active {
-    color: #6C63FE;
-    background-color: rgb(170, 255, 255);
+    background-color: rgb(0, 255, 187);
+    color: black;
 }
 
+.btn-tab:hover {
+    background-color: rgb(0, 183, 134);;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .content.show {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .content-img {
+        width: 100%;
+    }
+
+    .infos {
+        width: 100%;
+    }
+}
