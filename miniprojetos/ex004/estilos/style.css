@@ -13,76 +13,60 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: cadetblue;
 }
 
 .content-img {
-    width: 50%;
+    width: 100%;
 }
 
 .container {
     width: 90vw;
+    background-color: white;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.tab-btn {
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px 8px 0px 0px;
+    background-color: rgb(0, 170, 170);
+    cursor: pointer;
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: rgb(179, 255, 255);
+}
+
+.tab-btn.active {
+    background-color: cyan;
+    color: black;
 }
 
 .content {
-    background-color: rgb(0, 255, 187);
-    text-align: justify;
+    display: none;
+    background-color: cyan;
     padding: 10px;
     border-radius: 0px 8px 8px 8px;
-    display: none;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    transition: .3s;
+    text-align: justify;
 }
 
 .content.show {
     display: flex;
+    flex-direction: column;
 }
 
-.infos {
-    font-size:clamp(1rem, 2vw, 2rem);
-    width: 50%;
-}
-
-.btn-tab {
-    background-color: rgb(0, 195, 143);
-    border: none;
-    padding: 10px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: rgb(254, 245, 209);
-    cursor: pointer;
-    border-radius: 8px 8px 0px 0px;
-    transition: .4s;
-}
-
-.btn-tab.active {
-    background-color: rgb(0, 255, 187);
-    color: black;
-}
-
-.btn-tab:hover {
-    background-color: rgb(0, 183, 134);;
-}
-
-@media screen and (max-width: 768px) {
-    
+@media screen and (min-width: 768px) {
     .content.show {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: row;
     }
 
     .content-img {
-        width: 100%;
-    }
-
-    .infos {
-        width: 100%;
-    }
+    width: 50%;
+}
 }
