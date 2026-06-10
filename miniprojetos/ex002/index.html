@@ -12,56 +12,61 @@
 </head>
 
 <body>
+
     <button class="open-modal">
         Open Modal
     </button>
 
     <dialog class="modal">
         <form>
-            <div class="modal-header">
-                <h1>Faça o Login</h1>
-                <button class="btn-close" type="button">
-                    <i class="fa-solid fa-x"></i>
+            <div class="login-form">
+                <h1>Faça seu login</h1>
+
+                <button class="fechar">
+                    X
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="form-inputs">
-                    <label for="ema"><i class="fa-solid fa-user"></i></label>
-                    <input type="email" name="email" id="ema" placeholder="example@hotmail.com" autocomplete="off">
+
+            <div class="input-forms">
+                <label for="email"><i class="fa-solid fa-user"></i></label>
+                <input type="email" name="email" id="email" autocomplete="off">
+            </div>
+
+            <div class="input-forms">
+                <label for="senha"><i class="fa-solid fa-lock"></i></label>
+                <input type="password" name="senha" id="senha">
+            </div>
+
+            <div class="password-options">
+                <div class="remember">
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <label for="lembrar">Lembrar senha</label>
                 </div>
 
-                <div class="form-inputs">
-                    <label for="pas"><i class="fa-solid fa-lock"></i></label>
-                    <input type="password" name="password" id="pas" placeholder="**********">
-                </div>
-
-                <div class="password-options">
-                    <div class="remember">
-                        <input type="checkbox" name="check" id="check">
-                        <label for="check">Lembrar Senha</label>
-                    </div>
-
-                    <div class="forgot">
-                        <a href="#">Esqueceu a Senha?</a>
-                    </div>
-                </div>
-
-                <button class="btn-login" type="submit">
-                    Entrar na conta
-                </button>
-
-                <div class="register-options">
-                    <div class="register">
-                        <p>Não registrado?</p>
-                    </div>
-
-                    <div class="login">
-                        <a href="#">Logar agora</a>
-                    </div>
+                <div class="forgot">
+                    <a href="#">Esqueceu a senha?</a>
                 </div>
             </div>
+
+            
+            <input type="submit" value="Entrar na Conta">
+            
+
+            <div class="register-options">
+                <div class="register">
+                    <p>Não registrado?</p>
+                </div>
+
+                <div class="login">
+                    <a href="#">Logar agora</a>
+                </div>
+            </div>
+
+
         </form>
     </dialog>
+
+
     <script src="script.js"></script>
 </body>
 
