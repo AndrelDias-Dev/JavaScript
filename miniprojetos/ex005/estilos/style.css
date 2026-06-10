@@ -1,25 +1,21 @@
-@charset "UTF-8";
-
 * {
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
     height: 100vh;
-    background-color: rgb(255, 255, 255);
-    
+
     display: flex;
+    gap: 10px;
 }
 
 .sidebar {
-    background-image: linear-gradient(to right, rgb(0, 152, 83), rgb(0, 255, 140));
-    min-height: 100vh;
+    background-image: linear-gradient(to right, greenyellow, rgb(93, 156, 0));
+
     position: relative;
-    transition: all .4s;
-    min-width: 82px;
 
     display: flex;
     flex-direction: column;
@@ -27,21 +23,19 @@ body {
 }
 
 .sidebar-content {
-    padding: 14px;;
+    padding: 14px;
 }
 
 .user {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-avatar {
-    border: 2px solid white;
     border-radius: 8px;
-    width: 100px;
-    object-fit: cover;
+    border: 2px solid white;
 }
 
 .user-infos {
@@ -49,104 +43,111 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0px 10px;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    text-shadow: 1px 1px 4px black;
 }
 
 .user-infos span:last-child {
-    color: yellow;
+    color: rgb(221, 255, 0);
 }
 
 .side-items {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: 10px;
-    list-style-type: none;
     gap: 10px;
+
+    list-style-type: none;
+    padding-top: 10px;
 }
 
 .side-item a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    cursor: pointer;
-    background-color: white;
-    border-radius: 8px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
     padding: 14px;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
     gap: 10px;
 }
 
-.side-item a:hover, .logout-btn:hover {
-    transform: translate(0% , -5%);
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+.side-item a i {
+    position: relative;
+    top: 1px;
 }
 
-.open-btn {
+.side-item a:hover, .btn-logout:hover {
+    transform: translate(0px , -5%);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-open {
+    position: absolute;
+    top: 30px;
+    right: -20px;
     padding: 8px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
     border-radius: 50%;
-    background-color: rgb(0, 255, 140);
+    width: 40px;
+    height: 50px;
+    background-color: rgb(97, 161, 0);
     border: none;
+    font-size: 1.5rem;
     color: white;
     cursor: pointer;
-
-    display: flex;
-    justify-content:right;
-   
-    position: absolute;
-    top: 40px;
-    right: -20px;
-
-}
-
-.open-btn:hover {
-    background-color: rgb(70, 255, 172);
 }
 
 .logout {
     padding: 14px;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.logout-btn {
-    padding: 8px;
+.btn-logout {
+    padding: 10px;
+    font-size: 1.3rem;
     border-radius: 8px;
     border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
 }
 
+.btn-logout a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
 
+.btn-logout a i {
+    position: relative;
+    top: 2px;
+}
 
 .item-description {
-    width: 0px;
-    height: 0px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: width .4s ;
+    width: 0px;
+    height: 0px;
 }
 
 .open-sidebar {
-    min-width: 15%;
+    width: 150px;
 }
 
 .open-sidebar .item-description {
-    width: 150px;
-    height: auto;
+    
 }
 
-#open-btn-icon {
-    transition: transform .3s ease;
-}
 
-.open-sidebar #open-btn-icon {
-    transform: rotate(180deg);
-}
+
+
+
+
+
