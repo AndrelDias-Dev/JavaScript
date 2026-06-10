@@ -16,6 +16,8 @@ body {
     background-image: linear-gradient(to right, greenyellow, rgb(93, 156, 0));
 
     position: relative;
+    transition: all .6s;
+    min-width: 82px;
 
     display: flex;
     flex-direction: column;
@@ -47,7 +49,6 @@ body {
     color: white;
     font-size: 1.4rem;
     font-weight: bold;
-    text-shadow: 1px 1px 4px black;
 }
 
 .user-infos span:last-child {
@@ -76,6 +77,12 @@ body {
     gap: 10px;
 }
 
+.item.active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
 .side-item a i {
     position: relative;
     top: 1px;
@@ -89,7 +96,7 @@ body {
 .btn-open {
     position: absolute;
     top: 30px;
-    right: -20px;
+    right: -22px;
     padding: 8px;
     border-radius: 50%;
     width: 40px;
@@ -98,7 +105,15 @@ body {
     border: none;
     font-size: 1.5rem;
     color: white;
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+#btn-open-icon {
+    transition: transform .4s;
+}
+
+.open-sidebar #btn-open-icon {
+    transform: rotate(180deg);
 }
 
 .logout {
@@ -135,14 +150,16 @@ body {
     text-overflow: ellipsis;
     width: 0px;
     height: 0px;
+    transition: .4s;
 }
 
 .open-sidebar {
-    width: 150px;
+    min-width: 15%;
 }
 
 .open-sidebar .item-description {
-    
+    height: auto;
+    width: auto;
 }
 
 
