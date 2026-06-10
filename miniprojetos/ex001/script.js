@@ -1,27 +1,25 @@
 const btnMenu = document.querySelector('.btn-menu')
 const menu = document.querySelector('.menu')
 const menuLink = document.querySelectorAll('.menu-link')
-const iconMenu = btnMenu.querySelector('i')
+const icon = btnMenu.querySelector('i')
 
 
 btnMenu.addEventListener('click', () => {
-
     menu.classList.toggle('active')
 
-    if (menu.classList.contains('active') ) {
-        iconMenu.classList.remove('fa-bars')
-        iconMenu.classList.add('fa-xmark')
+    if (menu.classList.contains('active')) {
+        icon.classList.remove('fa-bars')
+        icon.classList.add('fa-xmark')
     } else {
-        iconMenu.classList.remove('fa-xmark')
-        iconMenu.classList.add('fa-bars')
+        icon.classList.remove('fa-xmark')
+        icon.classList.add('fa-bars')
     }
+
 })
 
-menuLink.forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('active')
+menuLink.forEach(link => link.addEventListener('click', () => {
+    menu.classList.remove('active')
 
-        iconMenu.classList.remove('fa-xmark')
-        iconMenu.classList.add('fa-bars')
-    })
-})
+    icon.classList.remove('fa-xmark')
+    icon.classList.add('fa-bars')
+}))
