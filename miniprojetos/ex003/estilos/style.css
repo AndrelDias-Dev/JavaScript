@@ -12,29 +12,20 @@ body {
     height: 100vh;
     background-color: gray;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-i {
-    font-size: 1.7rem;
+    gap: 10px;
 }
 
 .container {
     width: 90vw;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .accordion {
-    background-color: rgb(255, 94, 0);
-    padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
+    background-color: rgb(0, 194, 194);
+    font-size: 1.3rem;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -42,33 +33,30 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4rem;
-    font-weight: bolder;
-    
-}
-
-.accordion-header span {
-    max-width: 100%;
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-overflow: ellipsis;  
+    padding: 10px;
 }
 
 .accordion-body {
     opacity: 0;
-    height: 0;
-    font-size: 1.2rem;
-    color: white;
+    display: none;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    text-align: justify;
 }
 
 .accordion-body.active {
     opacity: 1;
-    height: 100%;
-    text-align: justify;
-    margin-top: 8px;
+    display: block;
 }
 
-.accordion:has(.active) .arrow  {
-    transform: rotate(180deg);
-    transition: .2s linear;
+#icon {
+    transition: transform .4s;
 }
+
+#icon.active {
+    transform: rotate(180deg);
+}
+
+
+
