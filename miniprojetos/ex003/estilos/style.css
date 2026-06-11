@@ -8,55 +8,41 @@
 }
 
 body {
+    background-color: midnightblue;
     width: 100vw;
     height: 100vh;
-    background-color: gray;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-}
-
-.container {
-    width: 90vw;
 }
 
 .accordion {
-    background-color: rgb(0, 194, 194);
+    background-color: rgb(255, 200, 0);
+    width: 90vw;
     font-size: 1.3rem;
+    font-weight: bold;
     border-radius: 8px;
+
     cursor: pointer;
 }
 
 .accordion-header {
+    padding: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
 
 .accordion-body {
-    opacity: 0;
+    padding: 8px;
     display: none;
     background-color: white;
-    border-radius: 0px 0px 10px 10px;
-    padding: 10px;
-    text-align: justify;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .accordion-body.active {
-    opacity: 1;
     display: block;
 }
-
-#icon {
-    transition: transform .4s;
-}
-
-#icon.active {
-    transform: rotate(180deg);
-}
-
-
 
