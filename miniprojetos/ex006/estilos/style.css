@@ -1,10 +1,11 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -19,17 +20,28 @@ body {
 }
 
 header {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: none;
+    z-index: 2;
+    width: 100%;
+    padding: 0px 10px;
 }
+
+header img {
+    width: 140px;
+}
+
+/*HEADER*/
 
 .header-icons {
     font-size: 1.7rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    color: white;
 }
 
 .header-icons i {
@@ -40,20 +52,122 @@ header {
     font-size: 2rem;
     border-radius: 50%;
     padding: 8px;
-    background-color: white;
+    background: none;
+    border: 2px solid white;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    aspect-ratio: 1 / 1;
 }
+
+/*HERO*/
 
 .slider {
     position: relative;
     width: 100%;
     height: 100%;
+    color: white;
 }
 
 .slide {
     width: 100%;
     height: 100%;
-    background-image: url("../");
+    background-image: url("../imagens/tubarão.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0px 40px;
+    width: 975px;
+}
 
+.slide-content h2 {
+    font-size: 6rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.slide-content span {
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    font-size: 4rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.slide-content p {
+    font-size: 1.4rem;
+    padding: 40px 0px;
+}
+
+/*BUTTONS*/
+
+button {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.slide-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.primary-button {
+    background-color: rgb(255, 247, 0);
+}
+
+.second-button {
+    background: none;
+    color: white;
+}
+
+.primary-button:hover, .second-button:hover {
+    transform: translate(0%, -5%);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/*NAVIGATION*/
+
+.navigation {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    padding: 0px 40px;
+}
+
+.navigation .bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 0px;
+}
+
+.navigation .bullets li {
+    list-style-type: none;
+    content: '';
+    width: 5vw;
+    height: 1vh;
+    background-color: white;
+
+}
+
+.navButtons button {
+    font-size: 4rem;
+}
