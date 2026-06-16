@@ -7,167 +7,177 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-    
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-}
 
 header {
-    width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6%;
+    width: 100%;
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 10;
+    padding: 0 4%;
 }
 
-header img {
-    width: 150px;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
+header .logo {
     filter: invert(1);
 }
 
-.header-icons {
+header .header-icons {
+    font-size: 2rem;
+    color: white;
     display: flex;
     align-items: center;
-    font-size: 2rem;
     gap: 20px;
-    color: white;
 }
 
-.header-icons i {
+header i {
     cursor: pointer;
 }
 
-.header-icons i:last-child {
-    border: 3px solid white;
+header .header-icons i:last-child {
+    font-size: 3rem;
     border-radius: 50%;
-    padding: 8px;
-    backdrop-filter: blur(2px);
+    border: 3px solid white;
+    padding: 9px;
 }
+
+
 
 .slider {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: relative;
 }
 
 .slide {
-    width: 100%;
-    height: 100%;
-    background-image: url("../imagens/tubarão.png");
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    color: white;
-    padding: 0 8%;
-}
-
-
-.slider-content {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 0 8%;
+    color: white;
+    z-index: -1;
+}
+
+.slide.active {
+    z-index: 2;
+}
+
+.slide:nth-child(1) {
+    background-image: url(../imagens/tubarão.png);
+}
+
+.slide:nth-child(2) {
+    background-image: url(../imagens/urso.png);
+}
+
+.slide:nth-child(3) {
+    background-image: url(../imagens/polvo.png);
+}
+
+.slide:nth-child(4) {
+    background-image: url(../imagens/pinguim.png);
+}
+
+.slide-content {
     width: 746px;
 }
 
-.slider-content h1 {
+.slide-content h1 {
     font-size: 5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.slider-content span {
-    font-size: 3rem;
     font-weight: bold;
-    display: flex;
-    justify-content: end;
-    padding: 0px 3px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.slider-content p {
+.slide-content span {
+    font-size: 3rem;
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.slide-content p {
+    padding: 20px 0px;
     font-size: 1.4rem;
-    padding: 30px 0px;
     text-align: justify;
 }
 
-.slider-buttons {
+.slide-buttons {
     display: flex;
     gap: 20px;
 }
 
-.slider-buttons button {
-    border-radius: 8px;
-    font-size: 1.3rem;
-    font-weight: bold;
+.slide-buttons button {
     padding: 8px;
-    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+  
+    
 }
 
-.slider-buttons button:hover {
-    transform: translate(0% , -5%);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+.slide-buttons button:hover {
+    transform: translate(0px, -5%);
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .primary-button {
-    background-color: yellow; 
-    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid white;
 }
 
 .second-button {
-    background-color: rgba(240, 248, 255, 0);
-    border: 2px solid white;
+    background: none;
     color: white;
-    backdrop-filter: blur(2px);
+    border: 2px solid white;
+    backdrop-filter: blur(3px);
 }
 
 .navigation {
-    position: absolute;
-    bottom: 0;
-    padding: 40px 8%;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 8%;
+    z-index: 10;
 }
 
-.navigation .bullets {
+.bullets {
     list-style-type: none;
     display: flex;
     gap: 10px;
+    padding: 8% 0;
 }
 
-.navigation .bullets li {
+.bullets li {
     background-color: white;
     width: 4vw;
-    height: 1.5vh;
-    cursor: pointer;
+    height: 1vh;
 }
 
-.navButtons {
+.nav-buttons {
     display: flex;
     gap: 20px;
 }
 
-.navButtons button {
+.nav-buttons button {
     padding: 8px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    width: 4rem;
-    cursor: pointer;
+    width: 60px; aspect-ratio: 1/1;
     background: none;
-    color: white;
     border: 3px solid white;
-    backdrop-filter: blur(2px);
+    color: white;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
 }

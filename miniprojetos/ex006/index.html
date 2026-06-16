@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/style.css">
+    <script defer src="script.js"></script>
     <title>Slider/Carrossel</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="imagens/logo.png" alt="logo">
+            <div class="logo">
+                <img src="imagens/logo.png" width="150px">
+            </div>
 
             <div class="header-icons">
                 <i class="fa-solid fa-user"></i>
@@ -20,17 +23,71 @@
         </header>
 
         <div class="slider">
-            <div class="slide">
-                <div class="slider-content">
+            <div class="slide active">
+                <div class="slide-content">
                     <h1>O MAIOR AQUÁRIO</h1>
                     <span>DO MUNDO</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos expedita voluptates provident nihil id suscipit! Facilis, repellat harum, nobis laborum ducimus natus, repellendus id fugiat quas cumque quod magni neque!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex adipisci nam iste similique harum, numquam temporibus omnis ratione dicta. In quaerat unde assumenda maxime explicabo consequuntur et odio nesciunt amet.</p>
 
-                    <div class="slider-buttons">
+                    <div class="slide-buttons">
                         <button class="primary-button">
                             INGRESSOS
                         </button>
+                        
+                        <button class="second-button">
+                            SOBRE NÓS
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="slide ">
+                <div class="slide-content">
+                    <h1>O MAIOR AQUÁRIO</h1>
+                    <span>DO MUNDO</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex adipisci nam iste similique harum, numquam temporibus omnis ratione dicta. In quaerat unde assumenda maxime explicabo consequuntur et odio nesciunt amet.</p>
+
+                    <div class="slide-buttons">
+                        <button class="primary-button">
+                            INGRESSOS
+                        </button>
+                        
+                        <button class="second-button">
+                            SOBRE NÓS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>O MAIOR AQUÁRIO</h1>
+                    <span>DO MUNDO</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex adipisci nam iste similique harum, numquam temporibus omnis ratione dicta. In quaerat unde assumenda maxime explicabo consequuntur et odio nesciunt amet.</p>
+
+                    <div class="slide-buttons">
+                        <button class="primary-button">
+                            INGRESSOS
+                        </button>
+                        
+                        <button class="second-button">
+                            SOBRE NÓS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>O MAIOR AQUÁRIO</h1>
+                    <span>DO MUNDO</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex adipisci nam iste similique harum, numquam temporibus omnis ratione dicta. In quaerat unde assumenda maxime explicabo consequuntur et odio nesciunt amet.</p>
+
+                    <div class="slide-buttons">
+                        <button class="primary-button">
+                            INGRESSOS
+                        </button>
+                        
                         <button class="second-button">
                             SOBRE NÓS
                         </button>
@@ -47,12 +104,12 @@
                 <li></li>
             </ul>
 
-            <div class="navButtons">
-                <button class="arrow-left">
+            <div class="nav-buttons">
+                <button class="arrow-prev">
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
 
-                <button class="arrow-right">
+                <button class="arrow-next">
                     <i class="fa-solid fa-angle-right"></i>
                 </button>
             </div>
