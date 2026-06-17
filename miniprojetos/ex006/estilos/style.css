@@ -49,7 +49,7 @@ header .header-icons i {
 }
 
 .slide {
-    position: relative;
+    position: absolute;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,6 +60,13 @@ header .header-icons i {
     align-items: center;
     padding: 0  8%;
     color: white;
+    z-index: -1;
+    opacity: 0;
+}
+
+.slide.active {
+    z-index: 2;
+    opacity: 1;
 }
 
 .slide:nth-child(1) {
@@ -120,6 +127,7 @@ header .header-icons i {
     font-size: 3rem;
     display: flex;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
 }
 
 .slide-content p {
@@ -134,10 +142,12 @@ header .header-icons i {
 
     position: absolute;
     bottom: 0;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .bullets {
@@ -150,6 +160,7 @@ header .header-icons i {
     width: 40px;
     height: 1vh;
     background-color: white;
+    border-radius: 10px;
 }
 
 .nav-buttons {
@@ -166,6 +177,7 @@ header .header-icons i {
     background: none;
     backdrop-filter: blur(3px);
     font-size: 1.5rem;
+    cursor: pointer;
  
     color: white;
 }
