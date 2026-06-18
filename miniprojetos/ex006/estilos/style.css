@@ -7,34 +7,17 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-    height: 500vh;
-}
-
 header {
-    width: 100%;
-    height: 200px;
-    padding: 0 4%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    width: 100%;
+    padding: 0 4%;
+
     position: absolute;
     top: 0;
-    z-index: 2;
-}
-
-header .header-icons {
-    font-size: 2rem;
-    color: white;
-    display: flex;
-    gap: 20px;
-
-}
-
-header .header-icons i {
-    cursor: pointer;
+    z-index: 1;
 }
 
 .logo img {
@@ -42,91 +25,53 @@ header .header-icons i {
     filter: invert(1);
 }
 
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icons i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
 .slider {
-    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    position: relative;
 }
 
 .slide {
     position: absolute;
-    background-position: top center;
+
+    background-image: url(../imagens/tubarão.png);
     background-repeat: no-repeat;
+    background-position: top center;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 0  8%;
+
+    padding: 0 8%;
     color: white;
-    z-index: -1;
-    opacity: 0;
-}
-
-.slide.active {
-    z-index: 2;
-    opacity: 1;
-}
-
-.slide:nth-child(1) {
-    background-image: url(../imagens/tubarão.png);
-}
-
-.slide:nth-child(2) {
-    background-image: url(../imagens/pinguim.png);
-}
-
-.slide:nth-child(3) {
-    background-image: url(../imagens/polvo.png);
-}
-
-.slide:nth-child(4) {
-    background-image: url(../imagens/urso.png);
-}
-
-
-.slide-buttons {
-    display: flex;
-    gap: 20px;
-
-}
-
-.slide-buttons button {
-    padding: 8px;
-    border-radius: 8px;
-    font-size: 1.4rem;
-    font-weight: bold; 
-    border: 3px solid white;
-}
-
-.primary-button {
-    background-color: yellow;
-   
-}
-
-.second-button {
-    background: none;
-    color: white;
-    backdrop-filter: blur(3px);
 }
 
 .slide-content {
-    width: 746px;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .slide-content h1 {
     font-size: 5rem;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .slide-content span {
-    display: flex;
-    justify-content: end;
     font-size: 3rem;
-    display: flex;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
     font-weight: bold;
 }
 
@@ -135,32 +80,61 @@ header .header-icons i {
     padding: 20px 0px;
 }
 
-.navigation {
-    width: 100%;
-    height: auto;
-    padding: 5% 8%;
+.slide-buttons {
+    display: flex;
+    gap: 20px;
+}
 
+.slide-buttons button {
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.slide-buttons button:hover {
+    transform: translate(0%, -5%);
+}
+
+.primary-button {
+    background-color: yellow;
+}
+
+.second-button {
+    background: none;
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+.navigation {
+    z-index: 2;
     position: absolute;
+
     bottom: 0;
-    z-index: 10;
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    padding: 50px 8%;
 }
 
 .bullets {
     list-style-type: none;
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .bullets li {
-    width: 40px;
-    height: 1vh;
+    width: 4vw;
+    height: 1.5vh;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .nav-buttons {
@@ -170,20 +144,16 @@ header .header-icons i {
 
 .nav-buttons button {
     padding: 8px;
-    border-radius: 50%;
+    font-size: 2rem;
     width: 60px;
     height: 60px;
-    border: 3px solid white;
-    background: none;
-    backdrop-filter: blur(3px);
-    font-size: 1.5rem;
+    border-radius: 50%;
     cursor: pointer;
- 
+    background: none;
+    backdrop-filter: blur(4px);
+    border: 3px solid white;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
-
-
-
-
