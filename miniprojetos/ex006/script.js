@@ -1,66 +1,54 @@
-const prevButton = document.querySelector('.arrow-left');
-const nextButton = document.querySelector('.arrow-right');
-const arraySlides = document.querySelectorAll('.slide');
+const btnPrev = document.querySelector('.btn-left')
+const btnNext = document.querySelector('.btn-right')
+const arraySlides = document.querySelectorAll('.slide')
 const ul = document.querySelector('ul')
-const lastSlide = arraySlides.length - 1;
 let index = 0;
 
-function changeSlide()  {
-    let arrayActive = document.querySelector('.slide.active')
-
-    arrayActive.classList.remove('active')
-
+function changeSlide() {
+    let slideActive = document.querySelector('.slide.active')
+    slideActive.classList.remove('active')
     arraySlides[index].classList.add('active')
 
-    document.querySelectorAll('ul li').forEach((li, i) => {
-    li.classList.toggle('active', i === index);
-  });
+    let activeBullet = document.querySelector('li.active')
+    activeBullet.classList.remove('active')
+    arrayBullets[index].classList.add('active')
+
 
 }
 
-nextButton.addEventListener('click', () => {
+btnNext.addEventListener('click', () => {
+    index = index + 1;
 
-    if (index < lastSlide) {
-        index = index + 1;
+    if (index < arraySlides.length) {
         changeSlide()
-
     } else {
+        index = 0;
 
-    index = 0;
-    changeSlide()
+        changeSlide()
     }
 })
 
-prevButton.addEventListener('click', () => {
-
+btnPrev.addEventListener('click', () => {
     index = index - 1;
 
     if (index < 0) {
-
-    index = lastSlide;
-    changeSlide()
+        index = arraySlides.length - 1;
+        changeSlide()
 
     } else {
-
-    changeSlide()
+        changeSlide()
     }
-}) 
+
+
+})
 
 for (let i = 0; i < arraySlides.length; i++) {
+
     let li = document.createElement('li')
-
-    li.addEventListener('click', () => {
-        index = i;
-        changeSlide() 
-    })
-
     ul.appendChild(li)
 }
 
+document.querySelector('li').classList.add('active')
 
-ul.querySelector('li').classList.add('active')
-
-
-
- 
+const arrayBullets = document.querySelectorAll('li')
 
