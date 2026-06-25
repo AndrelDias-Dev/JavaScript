@@ -10,13 +10,19 @@
 header {
     position: relative;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     background-color: black;
     color: white;
     padding: 20px;
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -70,6 +76,34 @@ header ul a:hover {
     top: 2px;
     left: 0px;
     font-size: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .menu {
+        display: none;
+    }
+
+    header ul {
+        opacity: 1;
+        transform: none;
+        width: auto;
+        height: auto;
+        position: relative;
+        pointer-events: auto;
+        list-style-type: none;
+        background: none;
+
+        display: flex;
+        border-radius: 8px;
+        gap: 10px;
+    }
+
+    header ul a {
+        background-color: rgb(14, 153, 153);
+        transition: .3s;
+        border-radius: 8px;
+    }
 }
 
 
