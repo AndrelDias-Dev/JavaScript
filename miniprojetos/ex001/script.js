@@ -1,8 +1,7 @@
-const btnMenu = document.querySelector('.btn-menu')
-const menu = document.querySelector('.menu')
+const btnMenu = document.querySelector('.menu')
+const menu = document.querySelector('ul')
 const menuLink = document.querySelectorAll('.menu-link')
-const icon = btnMenu.querySelector('i')
-
+const icon = document.querySelector('i')
 
 btnMenu.addEventListener('click', () => {
     menu.classList.toggle('active')
@@ -11,8 +10,8 @@ btnMenu.addEventListener('click', () => {
         icon.classList.remove('fa-bars')
         icon.classList.add('fa-xmark')
     } else {
-        icon.classList.remove('fa-xmark')
         icon.classList.add('fa-bars')
+        icon.classList.remove('fa-xmark')
     }
 
 })

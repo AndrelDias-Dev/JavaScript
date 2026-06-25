@@ -8,110 +8,68 @@
 }
 
 header {
-    background-color: black;
-    color: white;
-    padding: 10px 10px;
-    flex-wrap: wrap;
-    transition: .4s;
-
     position: relative;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: black;
+    color: white;
+    padding: 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    flex: 1 420px;
-}
 
-.menu {
-    display: flex;
-    flex-direction: column;
-
+header ul {
     position: absolute;
     top: 100%;
-    left: 0px;
+    left: 0;
+
+    background-color: rgb(71, 118, 118);
+
     width: 100%;
     height: 100vh;
 
     opacity: 0;
     pointer-events: none;
-    transition: 0.3s;
     transform: translate(-100%);
-
-
-
-    background-color: gray;
-    list-style-type: none;
-
+    transition: .3s;
 }
 
-.menu.active {
+header ul.active {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-0%);
+    transform: translate(0%);
 }
 
-.menu-link {
-    color: white;
+header ul a {
+    padding: 8px;
     text-decoration: none;
-    padding: 14px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    color: black;
+    width: 100%;
+    height: auto;
 
     display: block;
 
-
 }
 
-.menu-link:hover {
-    background-color: rgb(82, 82, 82);
-}
-
-.btn-menu {
-    padding: 5px;
-    font-size: 1.8rem;
+header ul a:hover {
+    background-color: rgb(33, 56, 56);
     color: white;
-    background: none;
-    border: none;
+}
+
+.menu {
+    font-size: 2rem;
     cursor: pointer;
 }
 
 .fa-xmark {
-    position: relative; 
-    top: 2px; 
-    font-size: 2.2rem;
+    position: relative;
+    top: 2px;
+    left: 0px;
+    font-size: 2.4rem;
 }
 
-@media screen and (min-width: 768px) {
-    
-    .btn-menu {
-        display: none;
-    }
-
-    .menu {
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-        width: auto;
-        height: auto;
-        gap: 5px;
-        background: none;
-
-        position: relative;
-
-        display: flex;
-        flex-direction: row;
-    }
-
-    .menu-link {
-        border-radius: 8px;
-        transition: .3s;
-
-    }
-    
-
-}
 
