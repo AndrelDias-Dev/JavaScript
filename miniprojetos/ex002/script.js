@@ -1,5 +1,6 @@
-const btnOpen = document.querySelector('.open-modal')
+const openModal = document.querySelector('.open-modal')
 const modal = document.querySelector('.modal')
 
-btnOpen.addEventListener('click', () => {modal.showModal()})
-
+openModal.addEventListener('click', () => {
+    modal.showModal()
+})

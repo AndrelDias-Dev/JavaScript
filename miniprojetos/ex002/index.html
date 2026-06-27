@@ -8,66 +8,49 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/style.css">
+    <script defer src="script.js"></script>
     <title>Modal</title>
 </head>
 
 <body>
-
     <button class="open-modal">
         Open Modal
     </button>
 
     <dialog class="modal">
         <form>
-            <div class="login-form">
-                <h1>Faça seu login</h1>
+            <div class="login">
+                <h2>Faça o seu login aqui</h2>
 
-                <button class="fechar">
+                <button class="close-modal">
                     X
                 </button>
             </div>
 
-            <div class="input-forms">
-                <label for="email"><i class="fa-solid fa-user"></i></label>
-                <input type="email" name="email" id="email" autocomplete="off">
-            </div>
-
-            <div class="input-forms">
-                <label for="senha"><i class="fa-solid fa-lock"></i></label>
-                <input type="password" name="senha" id="senha">
-            </div>
-
-            <div class="password-options">
-                <div class="remember">
-                    <input type="checkbox" name="lembrar" id="lembrar">
-                    <label for="lembrar">Lembrar senha</label>
+            <div class="logout">
+                <div class="logout-inputs">
+                    <label for="">Email</label>
+                    <input type="email" name="" id="email">
                 </div>
 
-                <div class="forgot">
-                    <a href="#">Esqueceu a senha?</a>
+                <div class="logout-inputs">
+                    <label for="senha">Senha</label>
+                    <input type="email" name="" id="senha">
                 </div>
             </div>
 
-            
-            <input type="submit" value="Entrar na Conta">
-            
-
-            <div class="register-options">
-                <div class="register">
-                    <p>Não registrado?</p>
+            <div class="forgot">
+                <div class="forgot-remember">
+                    <input type="checkbox" name="" id="checar">
+                    <label for="checar">Lembrar Senha</label>
                 </div>
 
-                <div class="login">
-                    <a href="#">Logar agora</a>
+                <div class="forgot-password">
+
                 </div>
             </div>
-
-
         </form>
     </dialog>
-
-
-    <script src="script.js"></script>
 </body>
 
 </html>
