@@ -19,7 +19,6 @@ header {
 .header-container {
     max-width: 1280px;
     margin: 0 auto;
-    background-color: brown;
     display: flex;
     justify-content: space-between;
     align-items: center;
