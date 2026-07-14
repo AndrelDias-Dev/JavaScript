@@ -1,14 +1,3 @@
-const btnOpen = document.querySelector('.btn-open').addEventListener('click', () => {
-    document.querySelector('.sidebar').classList.toggle('open-sidebar')
-
-    
+const btnSidebar = document.querySelector('.btn-sidebar').addEventListener('click', () => {
+    document.querySelector('.sidebar').classList.toggle('active')
 })
-
-const items = document.querySelectorAll('.item');
-
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            items.forEach(i => i.classList.remove('active')); // remove de todos
-            item.classList.add('active'); // adiciona só no clicado
-        });
-    });
