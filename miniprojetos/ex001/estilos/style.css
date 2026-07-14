@@ -29,22 +29,25 @@ header ul {
     position: absolute;
     top: 100%;
     left: 0;
+    
 
     background-color: rgb(71, 118, 118);
 
     width: 100%;
     height: 100vh;
+    visibility: hidden;
 
     opacity: 0;
     pointer-events: none;
-    transform: translate(-100%);
-    transition: .3s;
+    transform: translateX(-100%);
+    transition: .3s ease;
 }
 
 header ul.active {
+    visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    transform: translate(0%);
+    transform: translateX(0%);
 }
 
 header ul a {
