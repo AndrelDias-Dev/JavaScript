@@ -47,13 +47,13 @@ nav.sidebar.active {
 
 .btn-sidebar i {
     transition: all .3s ease;
+    position: relative;
+    right: -6px;
 }
 
 nav.sidebar.active .btn-sidebar i {
     transform: rotate(180deg);
-    position: relative;
-    top: -3px;
-
+    top: -2px;
 }
 
 .user {
