@@ -14,7 +14,7 @@
 }
 
 header {
-    padding: 40px 0px;
+    padding: 20px 0px 50px 0px;
 }
 
 header .interface {
@@ -54,7 +54,7 @@ header .logo span:nth-child(2) {
 header .logo-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 header .header-menu {
@@ -84,7 +84,8 @@ header .header-pesquisa {
 }
 
 header .header-pesquisa:focus-within {
-    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0 , 0.4);
 }
 
 header .header-pesquisa input {
@@ -115,7 +116,7 @@ main .main-left {
     display: flex;
     flex-direction: column;
     text-align: left;
-
+    padding: 0 5px;
 }
 
 .filter-icon {
@@ -124,12 +125,28 @@ main .main-left {
     gap: 5px;
 }
 
-.main-left .category {
-
+.main-left .category, .main-left .rating-minimum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-.category-container {
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+}
+
+.rating-item {
     text-align: left;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  top: 2px;
 }
 
 main .main-right {
