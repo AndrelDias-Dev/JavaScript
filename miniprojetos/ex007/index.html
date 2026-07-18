@@ -8,6 +8,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="responsive.css" media="screen">
     <script defer src="script.js"></script>
     <title>Shope Brasil</title>
 </head>
@@ -43,7 +44,7 @@
                 <div class="pesquisa-icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <input type="text" name="" id="" placeholder="Procure produtos...">
+                <input type="text" id="seach-input" placeholder="Procure produtos...">
             </div>
 
             <div class="header-icons">
@@ -60,16 +61,16 @@
                     <i class="fa-solid fa-filter"></i>
                     Filters
                 </div>
-                <button class="category-container">
-                    <div class="category">
+                <div class="category-container">
+                    <button class="category">
                         Categorias
                         <i class="fa-solid fa-angle-up"></i>
-                    </div>
+                    </button>
 
                     <div class="category-items">
                         <div class="category-item">
                             <div class="category-check">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" class="category-filter" value="eletronicos">
                                 Eletronicos
                             </div>
 
@@ -80,7 +81,7 @@
 
                         <div class="category-item">
                             <div class="category-check">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" class="category-filter" value="roupas">
                                 Roupas
                             </div>
 
@@ -91,7 +92,7 @@
 
                         <div class="category-item">
                             <div class="category-check">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" class="category-filter" value="livros">
                                 Livros
                             </div>
 
@@ -110,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                </button>
+                </div>
 
 
                 <button class="rating-container">
@@ -170,118 +171,8 @@
                         </div>
                     </div>
                     
-                    <div class="products-grid">
-                        <div class="product-card">
-
-                            <div class="product-top">
-                                <div class="product-badge new">
-                                    NEW
-                                </div>
-
-                                <button class="favorite-btn">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-
-                            <button class="cart">
-                                    Adicionar
-                            </button>
-
-                            <img src="imagens/t-shit.jpg" alt="">
-
-                            <div class="product-info">
-                                <h3 class="product-name">Camiseta Masculina</h3>
-
-                                <p class="product-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>(200)</span>
-                                </p>
-
-                                <p class="product-price">
-                                    <span class="current-price">29$</span>
-                                </p>
-
-
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-
-                            <div class="product-top">
-                                <div class="product-badge discount">
-                                    20%
-                                </div>
-
-                                <button class="favorite-btn">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-
-                            <button class="cart">
-                                    Adicionar
-                            </button>
-
-                            <img src="imagens/livro.jpg" alt="">
-
-                            <div class="product-info">
-                                <h3 class="product-name">Livro - Yol Gösteren</h3>
-
-                                <p class="product-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>(200)</span>
-                                </p>
-
-                                <p class="product-price">
-                                    <span class="current-price">29$</span>
-                                    <span class="old-price">39$</span>
-                                </p>
-
-
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-
-                            <div class="product-top">
-                                <div class="product-badge normal">
-                                    NEW
-                                </div>
-
-                                <button class="favorite-btn">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-
-                            <button class="cart">
-                                    Adicionar
-                            </button>
-
-                            <img src="imagens/smathphone.jpg" alt="">
-
-                            <div class="product-info">
-                                <h3 class="product-name">Infinix Hot 40i</h3>
-
-                                <p class="product-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>(200)</span>
-                                </p>
-
-                                <p class="product-price">
-                                    <span class="current-price">29$</span>
-                                </p>
-                            </div>
-                        </div> 
-                        
-                        
+                    <div class="products-grid">                
+                        ...                 
                     </div>
                 </div>
             </div>
