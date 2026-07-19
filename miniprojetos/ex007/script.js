@@ -23,8 +23,6 @@ buttons.forEach(button => {
         } else {
             button.classList.add('show');
         }
-
-
         menu.classList.toggle('active')
     })
 })
