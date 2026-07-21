@@ -8,93 +8,79 @@
 }
 
 header {
+    background-color: black;
+    color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-color: black;
-    color: white;
-    border-bottom: 2px solid blue;
-    padding: 10px;
+    padding: 5px 20px;
 }
 
-header .logo {
-    font-size: 2rem;
-}
-
-header .menu {
+.dropdown-container {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+}
+
+.dropdown {
     list-style-type: none;
-}
-
-nav .dropdown {
-    display: flex;
-    flex-direction: column;
     position: relative;
 }
 
-nav .dropdown-btn {
-    font-size: 1.2rem;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px 30px;
-
+.dropdown-btn {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    transition: .1s ease;
-}
-
-nav .dropdown-btn:hover {
-    background-color: rgb(62, 62, 62);
+    align-items: center;
     color: white;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 10px;
 }
 
-nav .dropdown-menu {
-    position: absolute;
-    top: 47px;
-    left: 0;
-
-    width: 100%;
-    height: 0;
-    opacity: 0;
-    text-overflow: ellipsis;
-    transform: translateY(-20px);
-    list-style-type: none;
-    border-radius: 0px 0px 10px 10px;
-    overflow: hidden;
-    transition: .4s ease;
+.dropdown-btn:hover {
+    background-color: rgb(64, 64, 64);
 }
 
-nav .dropdown-menu.active {
-    height: auto;
-    transform: translateY(0px);
+.dropdown-btn i {
+    position: relative;
+    top: 4px;
+}
+
+.dropdown-menu {
+   list-style-type: none;
+   position: absolute;
+   width: 100%;
+   top: 100%;
+   left: 0;
+   background-color: darkslategray;
+
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+}
+
+.dropdown-menu.active {
     opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
-.dropdown-btn.show i {
-    transform: rotate(180deg);
-}
-
-nav .dropdown-menu a {
-    text-decoration: none;
-    border-bottom: 1px solid rgb(254, 251, 251);
+.dropdown-menu li {
     width: 100%;
     display: block;
-    padding: 20px 10px;
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    cursor: pointer;
-    background-color: rgb(131, 131, 131);
-    transition: .1s ease;
 }
 
-nav .dropdown-menu a:hover {
-    background-color: rgb(72, 72, 72);
-    color: white;
+.dropdown-menu li a {
+   width: 100%;
+   padding: 10px;
+   display: block;
+   color: white;
+   text-decoration: none;
 }
 
-
+.dropdown-menu a:hover {
+    background-color: rgb(36, 61, 61);
+}
