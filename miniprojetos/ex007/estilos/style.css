@@ -44,21 +44,37 @@ header .logo {
     list-style-type: none;
     right: 0;
     top: 100%;
-    width: 100%;
+    width: 300px;
+    
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: .4s ease;
+    transform: translateY(-20px);
 
     position: absolute;
-    background-color: dimgray;
+    background-color:rgb(203, 203, 203);
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0px);
 }
 
 .dropdown-menu a {
     text-decoration: none;
-    color: white;
-    border-top: 1px solid white;
+    color: rgb(2, 2, 2);
+    border: 1px solid rgb(6, 6, 6);
     padding: 5px 10px;
+
     display: block;
+
 }
 
 
 .dropdown-menu a:hover {
     background: linear-gradient(to bottom, rgb(139, 139, 139), rgb(77, 77, 77));
+    color: white;
 }
