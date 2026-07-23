@@ -42,10 +42,10 @@
 }
 
 .toast.erro {
-    background-color: linear-gradient(to right, rgb(98, 0, 0), rgb(192, 0, 0));
+    background: linear-gradient(to right, rgb(98, 0, 0), rgb(192, 0, 0));
 }
 
 .toast.atençao {
-    background-color: linear-gradient(to right, rgb(91, 98, 0), rgb(115, 192, 0));
+    background: linear-gradient(to right, rgb(127, 144, 0), rgb(225, 255, 0));
     color: black;
 }
