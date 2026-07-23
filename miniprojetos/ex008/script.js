@@ -1,6 +1,6 @@
-const sucessBtn = document.querySelector('.sucess-btn');
-const errorBtn = document.querySelector('.error-btn');
-const warningBtn = document.querySelector('.warning-btn');
+const sucessoBtn = document.querySelector('.sucesso-btn');
+const erroBtn = document.querySelector('.erro-btn');
+const atençaoBtn = document.querySelector('.atençao-btn');
 const container = document.querySelector('.toast-container');
 
 function showToast(message, type) {
@@ -18,38 +18,42 @@ function showToast(message, type) {
 
     setTimeout(() => {
         toast.classList.add('active')
-    },100)
+    }, 300)
+    
 
     setTimeout(() => {
-        toast.classList.add('active')
+        toast.classList.remove('active')
 
         setTimeout(() => {
-            toast.classList.remove('active')
-        }, 300)
-    }, 3000)
+            toast.remove()
+        },3000);
+    },3000)
+
+
+    
 }
 
-sucessBtn.addEventListener('click', () => {
+
+sucessoBtn.addEventListener('click', () => {
 
     showToast(
-        'Operação efetuada com sucesso!',
-        'sucess'
+        'Efetuado com sucesso!!!',
+        'sucesso'
     )
 })
 
-errorBtn.addEventListener('click', () => {
+erroBtn.addEventListener('click', () => {
 
     showToast(
-        'Ops! Um erro ocorreu!',
-        'error'
+        'Erro! Tente novamente.',
+        'erro'
     )
 })
 
-warningBtn.addEventListener('click', () => {
+atençaoBtn.addEventListener('click', () => {
 
     showToast(
-        'Atenção! Tente novamente!',
-        'warning'
+        'Atenção! Preencha os dados.',
+        'atençao'
     )
 })
-
