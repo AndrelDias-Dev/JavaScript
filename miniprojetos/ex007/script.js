@@ -1,5 +1,6 @@
 const buttons = document.querySelectorAll('.dropdown-btn')
 const menus = document.querySelectorAll('.dropdown-menu')
+const links = document.querySelectorAll('a')
 
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -25,3 +26,11 @@ document.addEventListener('click', (e) => {
         })
     }
 })
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menus.forEach(menu => {
+      menu.classList.remove('active')
+    })
+  });
+});
