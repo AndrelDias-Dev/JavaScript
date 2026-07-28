@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    padding: 10px;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+}
+
+.toast {
+    width: max-content;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slideIn .3s ease;
+    position: relative;
+    margin-bottom: 20px;
+
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.toast.hide {
+    animation: slideOut .3s ease forwards;
+}
+
+
+
+.toast.sucesso .icon {
+    color: rgb(170, 255, 0);
+    border-left: 5px solid rgb(170, 255, 0);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.toast.erro .icon {
+    color: rgb(255, 0, 0);
+    border-left: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.toast.invalido .icon {
+    color: rgb(238, 255, 0);
+    border-left: 5px solid rgb(238, 255, 0);
+    border-radius: 10px;
+    padding: 5px;
+}
+
