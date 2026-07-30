@@ -37,7 +37,7 @@ function showToast(message, type) {
 
     setTimeout(() => {
         toast.remove()
-    }, 300)
+    },300)
 
     },4000)
 
