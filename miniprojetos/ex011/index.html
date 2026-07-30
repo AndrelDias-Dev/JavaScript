@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="estilos/style.css">
+
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="task-container">
+        <div class="task-header">
+            <h1>
+                <i class="fa-solid fa-check"></i>
+                Minhas Tarefas
+            </h1>
+        </div>
+
+        <div class="task-search">
+            <div class="task-seach-left">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Pesquisar tarefa...">
+            </div>
+
+            <i class="fa-solid fa-sun sol"></i>
+        </div>
+
+        <div class="task-create">
+            <input 
+            type="text" 
+            id="task-input" 
+            placeholder="Nova tarefa...">
+
+            <button class="add-task">
+                <i class="fa-solid fa-plus"></i>
+                Adicionar
+            </button>
+        </div>
+
+        <div class="task-filters">
+            <button>Todas (0)</button>
+            <button>Pendentes (0)</button>
+            <button>Concluídas (0)</button>
+        </div>
+
+        <div class="task-list">
+            <!-- TASK JS -->
+        </div>
+
+        <div class="task-pending">
+            (0) tarefas pendentes
+        </div>
+    </div>
 </body>
+
 </html>

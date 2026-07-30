@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 6%;
+    background-color: rgb(68, 68, 68);
+}
+
+.task-container {
+    background-color: rgb(0, 0, 0);
+    padding: 2%;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    max-width: 600px;
+}
+
+.task-header {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 30px 0px;
+}
+
+.task-search, .task-create {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    background-color: gray;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.task-seach-left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.task-seach-left input {
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+.task-create input {
+    width: calc(100% - 120px);
+    padding: 5px;
+    font-size: 1.3rem;
+     border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+button.add-task {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    transform: translateX(-5px);
+    transition: all .3s ease;
+    font-weight: 700;
+}
+
+button.add-task:hover {
+    transform: translateX(0px);
+    box-shadow: none;
+    background-color: rgb(0, 255, 17);
+    color: white;
+    
+}
+
+.task-search i {
+    width: 40px;
+    font-size: 1.3rem;
+}
+
+.task-search .sol {
+    cursor: pointer;
+}
+
+.task-filters {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.task-filters button {
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.task-filters button + button {
+    border-right: 2px solid white;
+}
+
+.task-pending {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
