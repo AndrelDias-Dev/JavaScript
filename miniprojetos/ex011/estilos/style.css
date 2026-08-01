@@ -34,7 +34,7 @@ body {
 .task-header {
     text-align: center;
     background-color: rgb(0, 0, 0);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     padding: 30px 0px;
 }
@@ -50,13 +50,13 @@ body {
     margin: 10px 0px;
 }
 
-.task-seach-left {
+.task-search-left {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.task-seach-left input {
+.task-search-left input {
     border-radius: 10px;
     padding: 5px;
     width: 100%;
@@ -80,17 +80,14 @@ button.add-task {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
     transform: translateX(-5px);
     transition: all .3s ease;
-    font-weight: 700;
 }
 
 button.add-task:hover {
     transform: translateX(0px);
-    box-shadow: none;
-    background-color: rgb(0, 255, 17);
-    color: white;
+    box-shadow: 2px 1px 5px rgb(0, 255, 17);
+    color: rgb(3, 3, 3);
     
 }
 
@@ -117,6 +114,7 @@ button.add-task:hover {
     border-radius: 10px;
     border: none;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .task-filters button + button {
@@ -126,8 +124,72 @@ button.add-task:hover {
 .task-pending {
     background-color: gray;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
     margin-top: 10px;
     text-align: center;
     font-size: 1rem;
 }
+
+/* TASK JS */
+
+.task-card {
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.task-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-search-left i {
+    cursor: pointer;
+}
+
+.task-icons {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s ;
+
+    display: flex;
+}
+
+.task-icons button {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.task-icons button:nth-child(1):hover {
+    color: red;
+}
+
+.task-icons button:nth-child(2):hover {
+    color: rgb(255, 191, 0);
+}
+
+.task-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
