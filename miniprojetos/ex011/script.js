@@ -1,10 +1,9 @@
 const inputTask = document.querySelector('#task-input')
-const addTask = document.querySelector('.add-task')
 const btnAddTask = document.querySelector('.add-task')
 
 
 
-const tasks = [
+let tasks = [
     {
         id: 1, tittle: 'Devo estudar Javascript', completed: false, createdAt: "Hoje • 18:30", category: "front",
     },
@@ -41,7 +40,7 @@ function renderTasks() {
 
                 <div class="task-down">
                     <div class="task-date">
-                        Hoje • 18:30
+                         ${task.createdAt}
                     </div>
                     
                     <div class="task-category">
@@ -60,25 +59,38 @@ function renderTasks() {
     })
 }
 
-btnAddTask.addEventListener('click', () => {
+function saveToLocaleStorage() {
+    localStorage.setItem('')
+}
 
-    const textoDigitado = inputTask.value;
-
+function addTask() {
+    const textoDigitado = inputTask.value.trim();
     if (textoDigitado === '') return;
 
-    const horaFormatada = new Date().toLocaleDateString('pt-br', {hour:'2-digit', minute:'2-digit'})
-
+    const horaFormatada = new Date().toLocaleTimeString('pt-br', {hour:'2-digit', minute:'2-digit'})
     const diaFormatado = new Date().toLocaleDateString('pt-br', {day:'2-digit'})
 
+
+
+
+
     const novaTarefa =  {
-            id: 1, 
+            id: Date.now(), 
             tittle: textoDigitado, 
             completed: false, 
             createdAt: `Dia: ${diaFormatado} • Hora: ${horaFormatada}`, 
             category: "front",
     };
-    
 
-    console.log(novaTarefa)
-})
+    tasks.push(novaTarefa)
+    renderTasks()
+    saveToLocalStorage();
+
+    inputTask.value = '';
+
+}
+
+btnAddTask.addEventListener('click', addTask)
+
+renderTasks()
 
