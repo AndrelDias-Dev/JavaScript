@@ -1,68 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-    integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="estilos/style.css">
-    <script defer src="script.js"></script>
 
-    <title>To-do-List</title>
+    <title>Lista de Tarefas</title>
 </head>
-
 <body>
-    <div class="task-container">
-        <div class="task-header">
-            <h1>
-                <i class="fa-solid fa-check"></i>
-                Minhas Tarefas
-            </h1>
+    <section class="listTask">
+        <div class="list-header">
+            <h2>Lista de Tarefas</h2>
         </div>
 
-        <div class="task-search">
-            <div class="task-search-left">
-                <label for="task-1">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </label>
-                <input type="text" id="task-1" placeholder="Pesquisar tarefa...">
-            </div>
-
-            <i class="fa-solid fa-sun sol"></i>
-        </div>
-
-        <div class="task-create">
-            <input 
-            type="text" 
-            id="task-input" 
-            placeholder="Nova tarefa...">
+        <div class="list-add">
+            <input type="text" name="add" id="add" placeholder="Escreva sua tarefa aqui...">
 
             <button class="add-task">
                 <i class="fa-solid fa-plus"></i>
-                Adicionar
             </button>
         </div>
 
-        <div class="task-filters">
-            <button>Todas (0)</button>
-            <button>Pendentes (0)</button>
-            <button>Concluídas (0)</button>
-        </div>
+        <ul class="taskContainer">
+            <li class="task">
+                <div class="task-input">
+                    <input type="radio" name="radio" id="radio">
 
-        <div class="task-list">
-            <!-- TASK JS -->
-        </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
 
-        <div class="task-pending">
-            (0) tarefas pendentes
-        </div>
-    </div>
+                <div class="task-buttons">
+                    <button class="btn-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button class="btn-edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="task">
+                <div class="task-input">
+                    <input type="radio" name="radio" id="radio">
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+
+                <div class="task-buttons">
+                    <button class="btn-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button class="btn-edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <script src="app.js"></script>
 </body>
-
 </html>
