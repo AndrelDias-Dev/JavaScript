@@ -1,11 +1,11 @@
-function renderTask(container, tasks) {
+export function renderTask(container, tasks) {
 
     container.innerHTML = tasks.map(task => `
         <li class="task">
                 <div class="task-input">
                     <input type="radio" name="radio" id="radio">
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>${task.text}</p>
                 </div>
 
                 <div class="task-buttons">
@@ -16,7 +16,18 @@ function renderTask(container, tasks) {
                     <button class="btn-edit">
                         <i class="fa-solid fa-pen"></i>
                     </button>
+
+                    <div class="date">
+                    ${task.date} 
                 </div>
+
+                <div class="hours">
+                    ${task.hours}
+                </div>
+                </div>
+            </div>
+
+            <div class="task-bottom">
             </li>
-    `).join('');
+    `).join('')
 }
