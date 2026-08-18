@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="estilos/style.css">
-
+    <link rel="stylesheet" href="estilos/geral.css" media="all">
+    <link rel="stylesheet" href="task.css">
     <title>Lista de Tarefas</title>
 </head>
+
 <body>
-    <section class="listTask">
+    <section class="list-container">
         <div class="list-header">
-            <h2>Lista de Tarefas</h2>
+            <h1>Minhas Tarefas</h1>
         </div>
 
-        <div class="list-add">
-            <input type="text" name="add" id="adiciona" placeholder="Escreva sua tarefa aqui...">
+        <div class="list-search">
+            <div class="input-search">
+                <label for="search">O</label>
+                <input type="text" name="search" id="search" placeholder="Pesquisar Tarefa...">
+            </div>
 
-            <button class="ad-task">
-                <i class="fa-solid fa-plus"></i>
+            <button class="btn-search">
+                Pesquisar
             </button>
         </div>
 
-        <ul class="taskContainer">
-        </ul>
+        <div class="list-adicionar">
+            <input type="text" name="adtext" id="adtext" placeholder="Adicione uma Nova Tarefa...">
+
+            <button class="adtask">
+                + <p>Adicionar</p>
+            </button>
+        </div>
+
+        <div class="task-container">
+            
+        </div>
+
+        <div class="list-info">
+            <div class="list-todos">
+                <p>Todos (0)</p>
+            </div>
+
+            <div class="list-pendent">
+                <p>Pendentes (0)</p>
+            </div>
+
+            <div class="list-conclui">
+                <p>Concluídas (0)</p>
+            </div>
+        </div>
+
+        <div class="pendent-container">
+            <p>(0) tarefas pendentes</p>
+        </div>
     </section>
 
-    <script src="app.js" type="module"></script>
+    <script type="module" src="./app.js"></script>
 </body>
+
 </html>

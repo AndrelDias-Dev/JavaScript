@@ -1,0 +1,166 @@
+
+.list-container {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.list-header {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.list-search, .list-adicionar, .list-info {
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0px;
+
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+
+}
+
+.input-search input {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    text-indent: 5px;
+    padding: 3px;
+    font-weight: 600;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.list-adicionar  input {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    text-indent: 5px;
+    padding: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-search, .list-adicionar button {
+    padding: 3px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    align-items: center;
+
+}
+
+.task-container {
+    background-color: gray;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+article.task {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-left input {
+    scale: 1.3;
+}
+
+.task-right {
+    display: flex;
+    gap: 5px;
+}
+
+.task-right button {
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.task-right button:nth-child(1) {
+    background-color: red;
+}
+
+.task-right button:nth-child(2) {
+    background-color: cyan;
+}
+
+.task-right button:nth-child(1):hover {
+    background-color: rgb(255, 95, 95);
+}
+
+.task-right button:nth-child(2):hover {
+    background-color: rgb(160, 255, 255);
+}
+
+.list-todos, .list-pendent, .list-conclui {
+    padding: 10px;
+    background-color: rgb(59, 59, 59);
+    border-radius: 8px;
+    cursor: default;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.list-todos:hover, .list-pendent:hover, .list-conclui:hover {
+    padding: 10px;
+    background-color: rgb(91, 91, 91);
+    border-radius: 8px;
+}
+
+
+.pendent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0px;
+
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+}

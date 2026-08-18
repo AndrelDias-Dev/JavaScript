@@ -1,33 +1,23 @@
 export function renderTask(container, tasks) {
 
-    container.innerHTML = tasks.map(task => `
-        <li class="task">
-                <div class="task-input">
-                    <input type="radio" name="radio" id="radio">
-
+    container.innerHTML = tasks.map((task) => {
+        return `
+        <article class="task">
+                <div class="task-left">
+                    <input type="checkbox" name="check" id="check">
                     <p>${task.text}</p>
                 </div>
 
-                <div class="task-buttons">
+                <div class="task-right">
                     <button class="btn-remove">
-                        <i class="fa-solid fa-xmark"></i>
+                        X
                     </button>
 
-                    <button class="btn-edit">
-                        <i class="fa-solid fa-pen"></i>
+                    <button class="edit">
+                        /
                     </button>
-
-                    <div class="date">
-                    ${task.date} 
                 </div>
-
-                <div class="hours">
-                    ${task.hours}
-                </div>
-                </div>
-            </div>
-
-            <div class="task-bottom">
-            </li>
-    `).join('')
+            </article>
+        `
+    }).join('')
 }

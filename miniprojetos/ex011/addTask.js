@@ -1,18 +1,10 @@
-export const tasks = [];
+export function addTask(tasks, taskValue) {
 
-export function addTask(text) {
-
-    const task = {
+    const newTask = {
         id: Date.now(),
-        date:diaFormatado,
-        hours:horaFormatado,
-        text: text,
-        completed:false
-};
+        text: taskValue,
+        completed: false
+    }
 
-tasks.push(task)
-
+    tasks.push(newTask)
 }
-
-const diaFormatado = new Date().toLocaleDateString('pt-BR')
-const horaFormatado = new Date().toLocaleTimeString('pt-BR')

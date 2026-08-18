@@ -1,41 +1,40 @@
 import { renderTask } from "./renderTask.js";
-import { addTask, tasks } from "./addTask.js";
+import { addTask } from "./addTask.js";
 
-const taskContainer = document.querySelector('.taskContainer')
-const addButtonTask = document.querySelector('.ad-task')
-const taskInput = document.querySelector('#adiciona')
+const container = document.querySelector('.task-container')
+const taskInput = document.querySelector('#adtext')
+const buttonTask = document.querySelector('.adtask')
 
+const tasks = [];
 
-addButtonTask.addEventListener('click', () => {
-
-    const taskInput = document.querySelector('#adiciona')
+buttonTask.addEventListener('click', () => {
 
     const taskValue = taskInput.value
 
-    if (taskValue.trim() === '') {
-       return
-    }
-    addTask(taskValue)
+    addTask(tasks, taskValue)
 
-    renderTask(taskContainer, tasks)
+    renderTask(container, tasks);
 
     taskInput.value = ''
-})
 
+})
 
 taskInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-        addButtonTask.click()
+
+    const taskValue = taskInput.value
+    
+    if (taskValue === '') {
+        return
+    }
+
+    addTask(tasks, taskValue)
+
+    renderTask(container, tasks);
+
+    taskInput.value = ''
     }
 })
-
-
-
-
-
-
-
-
 
 
 
