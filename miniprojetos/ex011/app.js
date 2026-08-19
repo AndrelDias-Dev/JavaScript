@@ -36,5 +36,14 @@ taskInput.addEventListener('keydown', (event) => {
     }
 })
 
+container.addEventListener('change', (event) => {
+    
+    const id = Number(event.target.dataset.id)
+
+    const task = tasks.find((task) => {
+        return task.id === id
+    })
+})
+
 
 

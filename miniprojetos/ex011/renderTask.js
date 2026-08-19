@@ -4,7 +4,7 @@ export function renderTask(container, tasks) {
         return `
         <article class="task">
                 <div class="task-left">
-                    <input type="checkbox" name="check" id="check">
+                    <input type="checkbox" name="check" data-id="${task.id}" ${task.completed ? 'checked' : ''}>
                     <p>${task.text}</p>
                 </div>
 
@@ -14,7 +14,7 @@ export function renderTask(container, tasks) {
                     </button>
 
                     <button class="edit">
-                        /
+                        <i class="fa-solid fa-pen"></i>
                     </button>
                 </div>
             </article>

@@ -46,6 +46,10 @@
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+.input-search input:focus-within::placeholder {
+    color: white;
+}
+
 .list-adicionar  input {
     width: 100%;
     font-size: 1.2rem;
@@ -56,6 +60,10 @@
     text-indent: 5px;
     padding: 3px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.list-adicionar  input:focus-within::placeholder {
+    color: white;
 }
 
 .btn-search, .list-adicionar button {
@@ -123,6 +131,7 @@ article.task {
 
 .task-right button:nth-child(1) {
     background-color: red;
+    order: 1;
 }
 
 .task-right button:nth-child(2) {
