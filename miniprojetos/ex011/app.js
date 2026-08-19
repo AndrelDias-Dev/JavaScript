@@ -11,6 +11,10 @@ buttonTask.addEventListener('click', () => {
 
     const taskValue = taskInput.value
 
+    if (taskValue === '') {
+        return alert('Campo vazio. Digite novamente.')
+    }
+
     addTask(tasks, taskValue)
 
     renderTask(container, tasks);
@@ -43,6 +47,11 @@ container.addEventListener('change', (event) => {
     const task = tasks.find((task) => {
         return task.id === id
     })
+
+    task.completed = !task.completed
+
+    renderTask(container, tasks)
+
 })
 
 

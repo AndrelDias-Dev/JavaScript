@@ -5,7 +5,7 @@ export function renderTask(container, tasks) {
         <article class="task">
                 <div class="task-left">
                     <input type="checkbox" name="check" data-id="${task.id}" ${task.completed ? 'checked' : ''}>
-                    <p>${task.text}</p>
+                    <p class="${task.completed ? 'completed' : ''}" >${task.text}</p>
                 </div>
 
                 <div class="task-right">
