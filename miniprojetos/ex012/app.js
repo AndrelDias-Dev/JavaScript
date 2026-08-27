@@ -27,14 +27,15 @@ async function Users() {
 
 }
 
-const usuarios = [
-    { nome: "João", idade: 17 },
-    { nome: "Maria", idade: 22 },
-    { nome: "Pedro", idade: 16 }
+const produtos = [
+    { id: 101, nome: "X-Bacon" },
+    { id: 102, nome: "Batata" },
+    { id: 103, nome: "X-Salada" },
+    { id: 104, nome: "Refrigerante" }
 ];
 
-const existeMaiorDeIdade = usuarios.some(usuario => usuario.idade >= 23)
+const posicao = produtos.findIndex(produto => produto.id ===  103)
 
-console.log(existeMaiorDeIdade)
+console.log(posicao)
 
 Users();
