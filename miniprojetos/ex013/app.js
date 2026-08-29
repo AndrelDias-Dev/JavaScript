@@ -1,5 +1,5 @@
 const container = document.querySelector('.users')
-const addBtn = document.querySelector('.add-btn')
+const inputSearch = document.querySelector('#search')
 
 const usuarios = [
     { nome: "João" },
@@ -8,7 +8,24 @@ const usuarios = [
     { nome: "Marcos" }
 ];
 
-addBtn.addEventListener('click', () => {
-    
+inputSearch.addEventListener('input', () => {
+    const inputValue = inputSearch.value.trim()
+
+    const filterUser = usuarios.filter(usuario => {
+        return usuario.nome.toLowerCase().includes(inputValue)
+    })
+
+    container.innerHTML = '';
+
+    filterUser.forEach(usuario => {
+        container.innerHTML += `
+        <div>
+            <div>${usuario.nome}</div>
+        </div>
+        `
+    }).join('')
 })
+
+
+
 
