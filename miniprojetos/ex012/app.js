@@ -7,7 +7,34 @@ async function Users() {
         const containerUsers = document.querySelector('#users')
 
 
-    }catch {
+        //FEITO COM FOREACH
+        //     containerUsers.innerHTML = ""; 
+
+        //     data.forEach(usuario => {
+        //         containerUsers.innerHTML += `
+        //     <div>
+        //         <div>${usuario.name}</div>
+        //         <div>${usuario.email}</div>
+        //     </div>
+        // `;
+        //     });
+
+
+
+
+        //FEITO COM MAP
+        containerUsers = data.map(usuario => {
+            containerUsers.innerHTML += `
+    <div>
+            <div>${usuario.name}</div>
+            <div>${usuario.email}</div>
+        </div>
+    `
+        }).join('')
+
+
+
+    } catch {
         console.log('error')
     }
 
