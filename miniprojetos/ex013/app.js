@@ -1,30 +1,26 @@
-const container = document.querySelector('.users')
-const inputSearch = document.querySelector('#search')
+const container = document.querySelector('.users');
+const nomeInput = document.querySelector('#nome');
+const form = document.querySelector('#form')
 
-const usuarios = [
-    { nome: "João" },
-    { nome: "Maria" },
-    { nome: "Pedro" },
-    { nome: "Marcos" }
-];
+const usuarios = [];
 
-inputSearch.addEventListener('input', () => {
-    const inputValue = inputSearch.value.trim()
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
 
-    const filterUser = usuarios.filter(usuario => {
-        return usuario.nome.toLowerCase().includes(inputValue)
-    })
+    const nome = nomeInput.value;
 
-    container.innerHTML = '';
+    const novoUsuario = {
+        nome: nome
+    }
 
-    filterUser.forEach(usuario => {
-        container.innerHTML += `
-        <div>
-            <div>${usuario.nome}</div>
-        </div>
-        `
-    }).join('')
+    usuarios.push(novoUsuario)
+
+    console.log(usuarios)
 })
+
+
+
+
 
 
 
