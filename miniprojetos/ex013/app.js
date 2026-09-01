@@ -14,8 +14,8 @@ form.addEventListener('submit', (event) => {
 
     const nome = nomeInput.value.trim()
 
-    if(nome === '') {
-        return;
+    if (nome === '') {
+        return
     }
 
     const novoUsuario = {
@@ -25,8 +25,8 @@ form.addEventListener('submit', (event) => {
 
     usuarios.push(novoUsuario)
 
-    
-console.log(usuarios)
+
+    console.log(usuarios)
 
     renderizarUsuarios();
 
@@ -47,8 +47,17 @@ function renderizarUsuarios() {
 
     container.innerHTML = render;
 
-}
+    const botoes = document.querySelectorAll('.btn-remove')
 
+    botoes.forEach(botao => {
+
+    botao.addEventListener('click', () => {
+        console.log(botao.dataset.id)
+    })
+
+})
+
+}
 
 
 
