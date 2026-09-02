@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="player-container">
+        <h3 class="player-playlist">Playlist - As mais tocadas!</h3>
+        <article class="player">
+            <audio class="player-song" src="musicas/Neblina - Rómpeme el Corazón (Video Oficial) - (64 Kbps).mp3"></audio>
+            <img class="player-img" src="imagens/neblina.webp" alt="">
+            <div class="player-top">
+                <div class="player-name">Nome Música</div>
+                <div class="player-favorite"><i class="fa-regular fa-heart"></i></div>
+            </div>
+
+            <div class="player-band">Nome da Banda</div>
+
+            <div class="player-bar"></div>
+
+            <div class="player-commands">
+                <button id="share" class="button">
+                    <i class="fa-solid fa-share"></i>
+                </button>
+
+                <button id="previous" class="button button-navigate">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+
+                <button id="play" class="button button-play">
+                    <i class="fa-solid fa-circle-play"></i>
+                </button>
+
+                <button id="next" class="button button-navigate">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+
+                <button id="return" class="button">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+            </div>
+
+        </article>
+    </section>
+
+    <script src="player.js"></script>
+</body>
+
+</html>
