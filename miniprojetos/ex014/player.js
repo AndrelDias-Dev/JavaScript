@@ -1,35 +1,48 @@
-const buttonPlay = document.querySelector('#play');
-const song = document.querySelector('.player-song');
-let ifSong = false;
+const btnPlay = document.querySelector('#play')
+const capa = document.querySelector('.player-img')
+const song = document.querySelector('audio')
+const nameSong = document.querySelector('.player-name')
+const nameBand = document.querySelector('.player-band')
+
+const playList = [
+    {id:1, capa: 'neblina.webp' , song:'neblina.mp3' , name:'Constelações em Fogo', band:'Neblina' },
+    {id:2, capa:'los capi.jpg' , song:'Los Capi - Ritmo Urbano.mp3' , name: 'Ritmo Urbano', band:'Los Capi' },
+    {id:3, capa:'aurora.jpg' , song:'aurora.mp3' , name:'Aurora' ,band:'Aurora Selvagem' },
+    {id:4, capa:'Sepultura - Roots.png' , song:'Sepultura - Roots.mp3' , name:'Roots Bloody Roots', band:'Sepultura'},
+]
+
+let isSong = false;
 let index = 0;
 
-
 function playSong() {
-    buttonPlay.querySelector('i').classList.remove('fa-circle-play');
-    buttonPlay.querySelector('i').classList.add('fa-circle-pause');
+    btnPlay.querySelector('i').classList.remove('fa-circle-play')
+    btnPlay.querySelector('i').classList.add('fa-circle-pause')
     song.play()
-    ifSong = true;
+    isSong = true
 }
 
 function pauseSong() {
-    buttonPlay.querySelector('i').classList.remove('fa-circle-pause');
-    buttonPlay.querySelector('i').classList.add('fa-circle-play');
+    btnPlay.querySelector('i').classList.remove('fa-circle-pause')
+    btnPlay.querySelector('i').classList.add('fa-circle-play')
     song.pause()
-    ifSong = false;
+    isSong = false
 }
 
 function decisionSong() {
-    if (ifSong) {
+    if (isSong === true) {
         pauseSong()
     } else {
         playSong()
     }
-
 }
 
+function inicializeSong() {
+    capa.src = `imagens/${playList[index].capa}`;
+    song.src = `musicas/${playList[index].song}`;
+    nameSong.innerText = playList[index].name;
+    nameBand.innerText = playList[index].band;
+}
 
+inicializeSong();
 
-
-buttonPlay.addEventListener('click', decisionSong)
-
-
+btnPlay.addEventListener('click', decisionSong)
