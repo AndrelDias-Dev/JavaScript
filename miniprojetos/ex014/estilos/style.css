@@ -78,9 +78,8 @@ body {
 
 .player-commands {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 1rem 0px;
-    width: 100%;
 }
 
 .player-commands .button {

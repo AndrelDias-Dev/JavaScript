@@ -5,11 +5,14 @@ const capa = document.querySelector('.player-img')
 const song = document.querySelector('audio')
 const nameSong = document.querySelector('.player-name')
 const nameBand = document.querySelector('.player-band')
+const progressBar = document.querySelector('.player-progress')
+const progressContainer = document.querySelector('.player-caixa')
+
 
 const playList = [
     {id:1, capa: 'neblina.webp' , song:'neblina.mp3' , name:'Constelações em Fogo', band:'Neblina' },
     {id:2, capa:'los capi.jpg' , song:'Los Capi - Ritmo Urbano.mp3' , name: 'Ritmo Urbano', band:'Los Capi' },
-    {id:3, capa:'aurora.jpg' , song:'aurora.mp3' , name:'Aurora' ,band:'Aurora Selvagem' },
+    {id:3, capa:'aurora.jpg' , song:'aurora.mp3' , name:'Aurora' , band:'Aurora Selvagem' },
     {id:4, capa:'Sepultura - Roots.png' , song:'Roots Bloody Roots - Sepultura.mp3' , name:'Roots Bloody Roots', band:'Sepultura'},
 ]
 
@@ -45,7 +48,7 @@ function inicializeSong() {
 function passarMúsica() {
     index++
 
-    if (index === playList.length) {
+    if (index > playList.length - 1) {
         index = 0
     }
 
@@ -64,9 +67,18 @@ function voltarMúsica() {
     playSong()
 }
 
+function updateBar() {
+    const barWidth = (song.currentTime/song.duration)*100
+    progressBar.style.setProperty('--progress', `${barWidth}%`)
+}
+
 
 inicializeSong();
 
 btnPlay.addEventListener('click', decisionSong)
 btnNext.addEventListener('click', passarMúsica)
 btnPrev.addEventListener('click', voltarMúsica)
+song.addEventListener('timeupdate', updateBar)
+
+
+
